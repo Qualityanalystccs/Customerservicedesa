@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VHZ7TCXTM');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>DISPOSITION CATEGORIES AND SUB-CATEGORIES WITH THEIR REMARKS</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                <th>No.</th>
+                <th>Category</th>
+                <th>Subcategory</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Emergency</td><td>No Power Many</td><td>Mteja zaidi ya mmoja wanakosa umeme.</td></tr>
+            <tr><td>2</td><td>Emergency</td><td>No Power Single</td><td>Mteja mmoja hana umeme/Umeme haufiki kwenye mita.</td></tr>
+            <tr><td>3</td><td>Emergency</td><td>Meter Not Working</td><td>Mita imeharibika/haiingizi umeme ndani/batani hazibonyezeki.</td></tr>
+            <tr><td>4</td><td>Emergency</td><td>Token Not Working</td><td>Token hazifanyi kazi (Thibitisha kwa kumuuliza mteja error anayoipata).</td></tr>
+            <tr><td>5</td><td>Emergency</td><td>CIU Not Working</td><td>CIU haifanyi kazi (Thibitisha kwa kumuuliza mteja error anayoipata.</td></tr>
+            <tr><td>6</td><td>Emergency</td><td>Unreliable Power Quality</td><td>Uimara wa umeme si mzuri.</td></tr>
+            <tr><td>7</td><td>Emergency</td><td>Damaged Power Infrastructure</td><td>Miundombinu ya umeme imeharibika (nguzo, transformer, nyaya).</td></tr>
+            <tr><td>8</td><td>Emergency</td><td>Sparks or Fire</td><td>Kuna moto au cheche.</td></tr>
+            <tr><td>9</td><td>Emergency</td><td>Power Theft</td><td>Wizi wa umeme.</td></tr>
+            <tr><td>10</td><td>Emergency</td><td>Vandalism</td><td>Uharibifu wa miundombinu ya umeme kwa makusudi.</td></tr>
+            <tr><td>11</td><td>Request</td><td>Key Change Token</td><td>Mita inahitaji Key change.</td></tr>
+            <tr><td>12</td><td>Request</td><td>Purchase to Unintended Meter</td><td>Malipo ya token za umeme yamefanyika kwenye mita tofauti na ya mteja.</td></tr>
+            <tr><td>13</td><td>Request</td><td>Purchase of Unintended Amount</td><td>Mteja amelipa kiasi tofauti na alichokusudia.</td></tr>
+            <tr><td>14</td><td>Request</td><td>Name Change Request</td><td>Maombi ya kubadilisha taarifa za usajili wa mita.</td></tr>
+            <tr><td>15</td><td>Request</td><td>Clear Tamper</td><td>Mita inahitaji clear tamper (Hakiki tiketi namba ya mteja kuona taarifa ya utatuzi wa changamoto ya mteja).</td></tr>
+            <tr><td>16</td><td>Request</td><td>Shifting Meter</td><td>Maombi ya kuhamisha mita.</td></tr>
+            <tr><td>17</td><td>Request</td><td>Shifting Pole</td><td>Maombi ya kuhamisha nguzo.</td></tr>
+            <tr><td>18</td><td>Request</td><td>Ending Service</td><td>Maombi ya kukata huduma ya umeme.</td></tr>
+            <tr><td>19</td><td>Request</td><td>Updating Electrical Appliances</td><td>Kuongeza vifaa vya matumizi ya umeme tofauti na vilivyobainishwa wakati wa kufanya maombi ya umeme.</td></tr>
+            <tr><td>20</td><td>Request</td><td>Account Transaction Statement</td><td>Maombi ya taarifa za manunuzi ya umeme.</td></tr>
+            <tr><td>21</td><td>Request</td><td>Unit Transfer</td><td>Maombi ya kuhamishiwa unit za umeme kwenye mita tofauti.</td></tr>
+            <tr><td>22</td><td>Request</td><td>Meter Accuracy Query</td><td>Maombi ya kupima ufanisi wa mita.</td></tr>
+            <tr><td>23</td><td>Request</td><td>To Be Added into Whatsapp Group</td><td>Maombi ya kuungwa kwenye kundi la whatsapp.</td></tr>
+            <tr><td>24</td><td>Request</td><td>Reconnection</td><td>Maombi ya kurejeshewa huduma ya umeme.</td></tr>
+            <tr><td>25</td><td>Request</td><td>Tariff Change</td><td>Maombi ya kubadilishiwa tarrif.</td></tr>
+            <tr><td>26</td><td>Request</td><td>Shifting Of Power Line</td><td>Maombi ya kuhamishwa laini ya umeme.</td></tr>
+            <tr><td>27</td><td>Request</td><td>Disconnection</td><td>Maombi ya kusitishiwa huduma kwa muda.</td></tr>
+            <tr><td>28</td><td>Inquiry</td><td>Key Change Token</td><td>Maulizo juu ya Key change (Namna ya kuziweka, kazi yake etc).</td></tr>
+            <tr><td>29</td><td>Inquiry</td><td>Purchase to Unintended Meter</td><td>Maulizo ya taarifa iliyotolewa juu ya malipo ya token za umeme yaliyofanyika kwenye mita tofauti na ya mteja.</td></tr>
+            <tr><td>30</td><td>Inquiry</td><td>Purchase of Unintended Amount</td><td>Maulizo ya taarifa iliyotolewa juu ya manunuzi ya kiasi tofauti na alichokusudia mteja.</td></tr>
+            <tr><td>31</td><td>Inquiry</td><td>Name Change Request</td><td>Maulizo juu ya kubadili taarifa za usajili wa mita ya mteja.</td></tr>
+            <tr><td>32</td><td>Inquiry</td><td>Clear Tamper</td><td>Maulizo juu ya clear tamper.</td></tr>
+            <tr><td>33</td><td>Inquiry</td><td>Shifting Meter</td><td>Maulizo juu ya kuhamisha mita.</td></tr>
+            <tr><td>34</td><td>Inquiry</td><td>Shifting Pole</td><td>Maulizo juu ya kuhamisha nguzo</td></tr>
+            <tr><td>35</td><td>Inquiry</td><td>Ending Service</td><td>Maulizo juu ya kukata huduma ya umeme.</td></tr>
+            <tr><td>36</td><td>Inquiry</td><td>Updating Electrical Appliances</td><td>Maulizo juu ya kuongeza vifaa vya matumizi ya umeme tofauti na alivyoianisha wakati wa kufanya maombi ya umeme.</td></tr>
+            <tr><td>37</td><td>Inquiry</td><td>Account Transaction Statement</td><td>Maulizo juu ya taarifa ya manunuzi ya umeme.</td></tr>
+            <tr><td>38</td><td>Inquiry</td><td>Unit Transfer</td><td>Maulizo juu ya kuhamisha unit za umeme kwenye mita tofauti..</td></tr>
+            <tr><td>39</td><td>Inquiry</td><td>Meter Accuracy Query</td><td>Maulizo juu ya kupima ufanisi wa mita.</td></tr>
+            <tr><td>40</td><td>Inquiry</td><td>Office Location</td><td>Maulizo juu ya anuani za ofisi za TANESCO.</td></tr>
+            <tr><td>41</td><td>Inquiry</td><td>Disconnection</td><td>Maulizo juu ya kusitisha huduma ya umeme kwa muda.</td></tr>
+            <tr><td>42</td><td>Inquiry</td><td>Reconnection</td><td>Maulizo juu ya kurejeshewa huduma ya umeme.</td></tr>
+            <tr><td>43</td><td>Inquiry</td><td>Unit Transfer</td><td>Maulizo juu ya kuhamisha unit za umeme.</td></tr>
+            <tr><td>45</td><td>Inquiry</td><td>Vandalism</td><td>Maulizo juu ya utoaji taarifa ya uharibifu wa miundo mbinu ya umeme kwa makusudi.</td></tr>
+            <tr><td>46</td><td>Inquiry</td><td>Meter Debt</td><td>Maulizo juu ya deni/madeni ya mita.</td></tr>
+            <tr><td>47</td><td>Inquiry</td><td>Energy Theft</td><td>Maulizo juu ya taarifa ya wizi wa umeme.</td></tr>
+            <tr><td>48</td><td>Inquiry</td><td>Accident Cases</td><td>Taarifa ya ajali.</td></tr>
+            <tr><td>49</td><td>Inquiry</td><td>Claims</td><td>Maulizo ya madai.</td></tr>
+            <tr><td>50</td><td>Inquiry</td><td>Service Line Cost</td><td>Maulizo ya gharama za kuunganishiwa umeme.</td></tr>
+            <tr><td>51</td><td>Inquiry</td><td>PTD Debt</td><td>Maulizo ya kodi ya jengo.</td></tr>
+            <tr><td>52</td><td>Inquiry</td><td>Power Application Process Status</td><td>Maulizo ya hatua iliyofikiwa kwenye maombi ya umeme.</td></tr>
+            <tr><td>53</td><td>Complaints</td><td>Compensations</td><td>Malalamiko ya kudai fidia.</td></tr>
+            <tr><td>54</td><td>Complaints</td><td>Accidents</td><td>Malalamiko ya ajali.</td></tr>
+            <tr><td>55</td><td>Complaints</td><td>Delay In Service Line Connection</td><td>Malalamiko ya kucheleweshewa kuunganishiwa umeme.</td></tr>
+            <tr><td>56</td><td>Complaints</td><td>Delaying in Survey</td><td>Malalamiko ya kucheleweshewa upimaji.</td></tr>
+            <tr><td>57</td><td>Complaints</td><td>Delaying on Resolving Emergency Fault</td><td>Malalamiko ya kucheleweshewa kutatuliwa dharura iliyojitokeza.</td></tr>
+            <tr><td>58</td><td>Complaints</td><td>Delaying on Resolving Complaint</td><td>Kuchelewa kutatua malalamiko.</td></tr>
+            <tr><td>59</td><td>Complaints</td><td>Power Line Crossing Above House</td><td>Malalamiko ya nyaya kupita juu ya nyumba.</td></tr>
+            <tr><td>60</td><td>Complaints</td><td>Power Line Crossing Farm or Plot</td><td>Malalamiko ya nyaya kupita juu ya shamba/kiwanja.</td></tr>
+            <tr><td>61</td><td>Complaints</td><td>Erecting Pole in Plot</td><td>Kusimamisha nguzo iliyoinama/kulala katika eneo husika.</td></tr>
+            <tr><td>62</td><td>Complaints</td><td>Dissatisfied With the Bill Amount</td><td>Malalamiko ya kutoridhishwa na kiasi ya bili.</td></tr>
+            <tr><td>63</td><td>Complaints</td><td>Staff Integrity</td><td>Malalamiko ya uadilifu wa wafanyakazi (Kuomba rushwa n.k).</td></tr>
+            <tr><td>64</td><td>Complaints</td><td>Delaying in Delivering Tokens</td><td>Malalamiko ya kuchelewa kupokea token za umeme baada ya manunuzi.</td></tr>
+            <tr><td>65</td><td>Complaints</td><td>Can't Buy Tokens</td><td>Malalamiko ya kushindwa kununua umeme.</td></tr>
+            <tr><td>66</td><td>Complaints</td><td>Low Voltage</td><td>Malalamiko ya kupata umeme mdogo.</td></tr>
+            <tr><td>67</td><td>Complaints</td><td>Quotation or Changes in Service Line</td><td>Malalamiko ya gharama/ubadilishwaji wa laini ya umeme.</td></tr>
+            <tr><td>68</td><td>Complaints</td><td>Poor Customer Care</td><td>Malalamiko ya kutoridhishwa na huduma kwa wateja.</td></tr>
+            <tr><td>69</td><td>Complaints</td><td>Dissatisfied With Meter Reading</td><td>Malalamiko ya kutoridhishwa na usomaji wa mita.</td></tr>
+            <tr><td>70</td><td>Complaints</td><td>Debt Amount</td><td>Malalamiko ya kiasi cha deni.</td></tr>
+            <tr><td>71</td><td>Complaints</td><td>Delaying in Token Refund</td><td>Malalamiko ya kucheleweshwa kurudishiwa token/unit za umeme.</td></tr>
+            <tr><td>72</td><td>Complaints</td><td>Delaying in Money Refund</td><td>Malalamiko ya kucheleweshwa kurudishiwa kiasi cha pesa.</td></tr>
+            <tr><td>73</td><td>Complaints</td><td>Power Outages</td><td>Malalamiko ya kukosekana kwa huduma ya umeme</td></tr>
+            <tr><td>74</td><td>Complaints</td><td>Installing Transformer in Plot or Farm</td><td>Malalamiko ya uwekaji wa transformer kwenye kiwanja/shamba.</td></tr>
+            <tr><td>75</td><td>Complaints</td><td>Delaying in Power Reconnection</td><td>Malalamiko ya kucheleweshwa kurejeshewa huduma ya umeme.</td></tr>
+            <tr><td>76</td><td>Complaints</td><td>Burnt Electrical Equipment</td><td>Malalamiko ya kuunguza kifaa cha umeme.</td></tr>
+            <tr><td>77</td><td>Complaints</td><td>Meter Registration</td><td>Malalamiko ya usajili wa mita.</td></tr>
+            <tr><td>78</td><td>Other Issues</td><td>Silent Call</td><td>Simu isiyosikika (upande wa mteja).</td></tr>
+            <tr><td>79</td><td>Other Issues</td><td>Drop call</td><td>Simu iliyokatika bila kufahamu changamoto ya mteja (Imekatwa na mteja).</td></tr>
+            <tr><td>80</td><td>Other Issues</td><td>Customer feedback</td><td>Mrejesho wa mteja juu ya huduma aliyoipata.</td></tr>
+        </tbody>
+    </table>
+ </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7VHZ7TCXTM');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>TANESCO BASE EMERGENCY NUMBERS</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>SEHEMU</th>
+                    <th>NAMBA</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>ARUSHA</td>
+                    <td>0738453778</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>DODOMA</td>
+                    <td>0734173368</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>GEITA</td>
+                    <td>0744085696</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>ILALA</td>
+                    <td>0733212575</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>IRINGA</td>
+                    <td>0739203015</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>KAGERA</td>
+                    <td>0785787898</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>KATAVI</td>
+                    <td>0688345200</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>KIGOMA</td>
+                    <td>0742235372</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>KILIMANJARO</td>
+                    <td>0697644924</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>KINONDONI KASKAZINI</td>
+                    <td>0692768587</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>KINONDONI KUSINI</td>
+                    <td>0756251753</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>LINDI</td>
+                    <td>0625239501</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>MANYARA</td>
+                    <td>0689795599</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>MARA</td>
+                    <td>0735165088</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>MBEYA</td>
+                    <td>0733588588</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>MOROGORO</td>
+                    <td>0733788208</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>MTWARA</td>
+                    <td>0735020797</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>MWANZA</td>
+                    <td>255-282501060</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>NJOMBE</td>
+                    <td>0760117774</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>PWANI</td>
+                    <td>0738256237</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>RUKWA</td>
+                    <td>0734643535</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>RUVUMA</td>
+                    <td>0760100020</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>SHINYANGA</td>
+                    <td>0733105423</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>SIMIYU</td>
+                    <td>0734013113</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>SINGIDA</td>
+                    <td>0733122299</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>SONGWE</td>
+                    <td>0687651414</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>TABORA</td>
+                    <td>0733735548</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>TANGA</td>
+                    <td>0716166126</td>
+                </tr>
+                <tr>
+                    <td>29</td>
+                    <td>TEMEKE</td>
+                    <td>0694169798</td>
+                </tr>
+                <tr>
+                    <td>30</td>
+                    <td>Zanzibar ZECO</td>
+                    <td>0772877879</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

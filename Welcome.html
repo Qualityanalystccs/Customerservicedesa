@@ -1,0 +1,219 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSTOMER SERVICE DESA</title>
+    <style>
+        /* Importing Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@700&display=swap');
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Roboto Slab', serif; /* Set the font to Roboto Slab */
+            text-align: center;
+            overflow: hidden; /* Prevent scrollbars */
+        }
+
+        /* Styling the background video */
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw; /* Use viewport width */
+            height: 100vh; /* Use viewport height */
+            z-index: -1; /* Keeps the video behind the content */
+            object-fit: cover; /* Ensures the video covers the entire screen without distortion */
+            pointer-events: none; /* Prevent interaction with the video */
+        }
+
+        /* Container for content */
+        .container {
+            position: relative;
+            z-index: 2;
+            margin-top: 20vh; /* Adjust vertical position */
+            color: #fff;
+        }
+
+        img.logo {
+            position: absolute;
+            height: 80px; /* Adjust height as needed */
+            z-index: 2; /* Ensure logos are above the video */
+        }
+
+        img.logo-left {
+            top: 20px;
+            left: 20px;
+        }
+
+        img.logo-right {
+            top: 20px;
+            right: 20px;
+        }
+
+        h1 {
+            font-size: 48px; /* Increased font size */
+            margin-bottom: 10px;
+            color: #FFD700; /* Changed text color to yellow */
+            font-weight: bold; /* Makes the text bold */
+            opacity: 0; /* Start hidden for animation */
+            animation: fadeInOut 4s forwards; /* Animation for fading */
+        }
+
+        .customer-service {
+            font-size: 48px; /* Increased font size */
+            margin-bottom: 10px;
+            color: #FFD700; /* Yellow color */
+            font-weight: bold; /* Makes the text bold */
+            opacity: 0; /* Start hidden for animation */
+            animation: fadeIn 4s 4s forwards; /* Animation for fading in */
+        }
+
+        p {
+            font-size: 20px; /* Slightly increased font size */
+            margin-top: 0;
+            color: #FFD700; /* Changed text color to yellow */
+            font-weight: bold; /* Makes the text bold */
+        }
+
+        .button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 18px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Animation for welcome text */
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            20% { opacity: 1; }
+            80% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        /* Animation for customer service text */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Media Queries for Responsiveness */
+        @media only screen and (max-width: 600px) {
+            /* For mobile devices */
+            h1 {
+                font-size: 30px;
+            }
+
+            .customer-service {
+                font-size: 30px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            .button {
+                padding: 8px 16px;
+                font-size: 16px;
+            }
+
+            img.logo {
+                height: 50px; /* Smaller logo for mobile */
+            }
+
+            .container {
+                margin-top: 10vh; /* Adjust content position on small screens */
+            }
+        }
+
+        @media only screen and (min-width: 601px) and (max-width: 1024px) {
+            /* For tablets */
+            h1 {
+                font-size: 40px;
+            }
+
+            .customer-service {
+                font-size: 40px;
+            }
+
+            p {
+                font-size: 18px;
+            }
+
+            .button {
+                padding: 9px 18px;
+                font-size: 17px;
+            }
+
+            img.logo {
+                height: 60px; /* Adjust logo size for tablets */
+            }
+
+            .container {
+                margin-top: 15vh; /* Adjust content position for tablets */
+            }
+        }
+
+        @media only screen and (min-width: 1025px) {
+            /* For desktops */
+            h1 {
+                font-size: 48px;
+            }
+
+            .customer-service {
+                font-size: 48px;
+            }
+
+            p {
+                font-size: 20px;
+            }
+
+            .button {
+                padding: 10px 20px;
+                font-size: 18px;
+            }
+
+            img.logo {
+                height: 80px; /* Logo size for desktops */
+            }
+
+            .container {
+                margin-top: 20vh; /* Original position */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Video background -->
+    <iframe class="background-video"
+        src="https://player.vimeo.com/video/1011747163?background=1&autoplay=1&muted=1&loop=1"
+        frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+    </iframe>
+
+    <!-- Logo images -->
+    <img src="Tanescoo.PNG" alt="Tanesco Logo" class="logo logo-right">
+    <img src="Mwenge.PNG" alt="Mwenge Logo" class="logo logo-left">
+
+    <!-- Content container -->
+    <div class="container">
+        <h1>WELCOME TO</h1>
+        <div class="customer-service">CUSTOMER SERVICE DESA</div>
+        <p>Your Satisfaction is our priority, Above and Beyond.</p>
+        <a href="index.html" class="button">Click Next to Continue</a>
+    </div>
+
+</body>
+</html>

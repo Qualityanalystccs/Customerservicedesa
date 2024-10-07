@@ -1,0 +1,274 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VHZ7TCXTM');
+ </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>SERVICE LINE CONNECTION AND RELATED ISSUES</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Issue</th>
+                    <th>SLA</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Bei ya CIU Single Phase</td>
+                    <td>Immediately</td>
+                    <td>80,000</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Bei ya CIU Three Phase</td>
+                    <td>Immediately</td>
+                    <td>120,000</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Bei ya Nguzo</td>
+                    <td>N/A</td>
+                    <td>Surveyor Update</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bei ya Mita Single Phase</td>
+                    <td>N/A</td>
+                    <td>320,960</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Bei ya Mita Three Phase</td>
+                    <td>N/A</td>
+                    <td>912,014</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Ufungaji wa Umeme nje ya mradi</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Muda wa kupata control number ya malipo ndani ya mita 30</td>
+                    <td>Siku 7 za kazi</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Muda wa kupata control number ya malipo ndani ya mita 60</td>
+                    <td>Siku 14 za kazi</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Muda wa kupata control number ya malipo ndani ya mita 100</td>
+                    <td>Siku 14 za kazi</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Uchunguzi wa Mita</td>
+                    <td>Siku 3 za kazi baada ya kupokea malipo ya usomaji taarifa</td>
+                    <td>Surveyor Update</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Majibu ya uchunguzi wa Mita</td>
+                    <td>Ndani ya siku 15 za kazi baada ya kusomewa na mafundi.</td>
+                    <td>Free</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Fidia ya Token kwa Mita iliyokutwa na ubovu baada ya kupimwa</td>
+                    <td>Ndani ya siku 7 za kazi baada ya kusomewa mita.</td>
+                    <td>Surveyor Update</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Kufungiwa Umeme ndani ya mita 30 kutoka kwenye nguzo | Single Phase</td>
+                    <td>Ndani ya siku 30 za kazi.</td>
+                    <td>320,960</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Kufungiwa Umeme ndani ya mita 70 kutoka kwenye nguzo | Single Phase</td>
+                    <td>Ndani ya siku 60 za kazi.</td>
+                    <td>515,618</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Kufungiwa Umeme ndani ya mita 120 kutoka kwenye nguzo | Single Phase</td>
+                    <td>Ndani ya siku 90 za kazi.</td>
+                    <td>696,670</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Kufungiwa Umeme ndani ya mita 30 kutoka kwenye nguzo | Three Phase</td>
+                    <td>Ndani ya siku 30 za kazi.</td>
+                    <td>912,014</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Kufungiwa Umeme ndani ya mita 120 kutoka kwenye nguzo | Three Phase</td>
+                    <td>Ndani ya siku 60 za kazi.</td>
+                    <td>1,249,385</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Kufungiwa Umeme ndani ya mita 170 kutoka kwenye nguzo | Three Phase</td>
+                    <td>Ndani ya siku 90 za kazi.</td>
+                    <td>1,639,156</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>Ndani ya mradi wa REA</td>
+                    <td>N/A</td>
+                    <td>27,000</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

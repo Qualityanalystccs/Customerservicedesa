@@ -1,0 +1,1710 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VHZ7TCXTM');
+</script>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>METER ERROR CODES, RESOLUTION AND RELATED ISSUES</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Meter</th>
+                    <th>Meter Number</th>
+                    <th>Remark</th>
+                    <th>Resolution</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>Old (019)</td>
+                    <td>Kuna Token zilinunuliwa hazijaingizwa badala yake zimeingizwa za hivi karibuni. Thibitisha muda wa Token. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>0.00 (002)</td>
+                    <td>Mita haina salio. Aweke salio la umeme.</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>USED (020)</td>
+                    <td>Token zimekwisha tumika.</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>OVER PO (023)</td>
+                    <td>Vifaa vinavyotumiwa na mteja vimevuka uwezo wa Mita. Mteja azime baadhi ya vifaa ndani, asubiri kwa dakika 2 Mita itawaka yenyewe.</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>LOC OUT (024)</td>
+                    <td>Mita imejifunga kufuatia na kuelemewa/kushtuka kwa mara 5 ndani ya dakika 30. Mteja asubiri dakika 30 zipite itawaka. Fungua taarifa ikishindikana.</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>Err 01</td>
+                    <td>Mita imebaini kuna tatizo fulani sehemu. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>Call</td>
+                    <td>Umeme umeisha ila Mita haikati umeme (Inaanza kujikopesha/ Relay imegoma kufunga). Kuthibitisha bonyeza 13 kisha Ok itasoma Unit zikiwa na Hasi (-). Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>nUFAil (Memory failure)</td>
+                    <td>Mita imebaini tukio la ulaghai. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>tAMp-St (Tamper status)</td>
+                    <td>Mita imeingia Tamper. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>ENERGY CONSUMPTION</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>POWER</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>TARIFF INDEX</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>TRIPPING CODE</td>
+                    <td>01</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>Salio</td>
+                    <td>003 | 006 | 007</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>VOLTAGE</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>CONLOG</td>
+                    <td>04</td>
+                    <td>CURRENT</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>ENERGY CONSUMPTION</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>VOLTAGE</td>
+                    <td>26</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>CURRENT</td>
+                    <td>27</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>POWER</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>TRIPPING CODE</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>CONLOG 3 PHASE</td>
+                    <td>04</td>
+                    <td>TARIFF INDEX</td>
+                    <td>N/A</td>
+                </tr>
+                <tr>
+                    <td>23</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Reject</td>
+                    <td>Token zimekataliwa kuingia. Thibitisha na Mteja. Fungua taarifa ikishindikana.</td>
+                </tr>
+                <tr>
+                    <td>24</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Old</td>
+                    <td>Kuna Token zilinunuliwa hazijaingizwa badala yake zimeingizwa za hivi karibuni. Thibitisha muda wa Token. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>25</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Used</td>
+                    <td>Token zimekwisha tumika. Thibitisha na mteja. Ikishindikana fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>26</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Err 01</td>
+                    <td>Token zimekosewa kutengenezwa na mfumo. Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>27</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Err 02</td>
+                    <td>Key Expired Error (Token zimekwisha expire). Fungua taarifa.</td>
+                </tr>
+                <tr>
+                    <td>28</td>
+                    <td>BAHDELA (CLOU)</td>
+                    <td>5417|5416|5420|5418</td>
+                    <td>Err 03</td>
+                    <td>Token kwenye mita hazijabadilishwa ambazo zinamilikiwa na DDTK type. Fungua taarifa.</td>
+                </tr>
+             <tr>
+    <td>29</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>Err 04</td>
+    <td>Token zimekosewa kuingizwa mara nyingi kwenye Mita. Thibisha na Mteja. Mteja asubiri kwa muda kisha aingize tena.</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>Err 05</td>
+    <td>Token zilizowekwa haziendani na hali ya mita kwa sasa. Thibitisha na Mteja. Fungua taarifa ikibidi.</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>Err 06</td>
+    <td>Token zimekosewa kutengenezwa na mfumo. Fungua taarifa.</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>Err 07</td>
+    <td>Token zilizowekwa ni za mita tofauti. Thibitisha na mteja. Fungua taarifa ikibidi.</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>Err 08</td>
+    <td>Software ya mita haiko sawa. Fungua taarifa.</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>ENERGY CONSUMPTION</td>
+    <td>01</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>VOLTAGE</td>
+    <td>04</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>BAHDELA (CLOU)</td>
+    <td>5417|5416|5420|5418</td>
+    <td>CURRENT</td>
+    <td>05</td>
+  </tr>
+        <tr>
+            <td>37</td>
+            <td>BAHDELA (CLOU)</td>
+            <td>5417|5416|5420|5418</td>
+            <td>POWER</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>38</td>
+            <td>BAHDELA (CLOU)</td>
+            <td>5417|5416|5420|5418</td>
+            <td>TARIFF INDEX</td>
+            <td>81</td>
+        </tr>
+        <tr>
+            <td>39</td>
+            <td>BAHDELA (CLOU)</td>
+            <td>5417|5416|5420|5418</td>
+            <td>Connecting..</td>
+            <td>1593570 THEN MITA NAMBA THEN OK</td>
+        </tr>
+        <tr>
+            <td>40</td>
+            <td>BAHDELA (CLOU)</td>
+            <td>5417|5416|5420|5418</td>
+            <td>Salio</td>
+            <td>003 | 006 | 007</td>
+        </tr>
+        <tr>
+            <td>41</td>
+            <td>BAHDELA (CLOU)</td>
+            <td>5417|5416|5420|5418</td>
+            <td>Meter Number</td>
+            <td>000 | 068</td>
+        </tr>
+        <tr>
+            <td>42</td>
+            <td>CONLOG</td>
+            <td>04</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>02</td>
+        </tr>
+        <tr>
+            <td>43</td>
+            <td>CONLOG</td>
+            <td>04</td>
+            <td>Meter Number</td>
+            <td>04</td>
+        </tr>
+        <tr>
+            <td>44</td>
+            <td>CONLOG</td>
+            <td>04</td>
+            <td>CURRENT</td>
+            <td>N/A</td>
+        </tr>
+        <tr>
+            <td>45</td>
+            <td>CONLOG</td>
+            <td>04</td>
+            <td>POWER</td>
+            <td>01</td>
+        </tr>
+        <tr>
+            <td>46</td>
+            <td>CONLOG</td>
+            <td>04</td>
+            <td>TARIFF INDEX</td>
+            <td>35</td>
+        </tr>
+        <tr>
+            <td>47</td>
+            <td>DT Smart</td>
+            <td>_</td>
+            <td>Err 53</td>
+            <td>Setting Key overtime.</td>
+        </tr>
+        <tr>
+            <td>48</td>
+            <td>DT Smart</td>
+            <td>_</td>
+            <td>Err 59</td>
+            <td>Token zimezidi kiwango cha uhifadhi wa Mita. Mteja atumie unit zipungue kwanza ndipo aweke mpya. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>49</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Ya-ya-oU</td>
+            <td>Mita imefika ukomo wa kuingizwa Units. Mteja anatakiwa kuutumia umeme uliopo kwanza upungue ndipo aweke mpya. Fungua taarifa ikibidi.</td>
+        </tr>
+        <tr>
+            <td>50</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>No-no-no</td>
+            <td>Token zimekataliwa kuingia. Thibitisha na Mteja. Fungua taarifa ikishindikana.</td>
+        </tr>
+        <tr>
+            <td>51</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Y-od-no</td>
+            <td>Kuna Token zilinunuliwa hazijaingizwa badala yake zimeingizwa za hivi karibuni. Thibitisha muda wa Token. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>52</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Y-ud-no | Reject 4</td>
+            <td>Token zimekwisha tumika. Thibitisha na mteja. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>53</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Y-Ed-no</td>
+            <td>Token zimekwisha haribika (Expired). Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>54</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Y-ya-no</td>
+            <td>Mita imeshindwa kuendelea na kitu kilichokuwa kinaendelea. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>55</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 88</td>
+            <td>CIU haina mawasiliano na Mita. Bonyeza 755204 kisha OK weka namba ya Mita bila kuanza na 43 ya mwanzo kisha bonyeza OK tena.</td>
+        </tr>
+        <tr>
+            <td>56</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 40</td>
+            <td>Invalid subclass. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>57</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 45</td>
+            <td>Key Change token zimekwisha expire. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>58</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 47</td>
+            <td>Mita hairuhusiwi kununua umeme ikiwa kwenye Mode ya muda huo. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>59</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 48</td>
+            <td>Mchakato wa kutumia Key Change haujafanyika kikamilifu. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>60</td>
+            <td>EDMI</td>
+            <td>430 | 431</td>
+            <td>Err 49</td>
+            <td>Data iliyohusishwa na Mita haitumiki. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>61</td>
+            <td>EDMI</td>
+            <td>430</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>01 | 03</td>
+        </tr>
+        <tr>
+            <td>62</td>
+            <td>EDMI</td>
+            <td>430</td>
+            <td>VOLTAGE</td>
+            <td>03 | 08</td>
+        </tr>
+        <tr>
+            <td>63</td>
+            <td>EDMI</td>
+            <td>430</td>
+            <td>CURRENT</td>
+            <td>04 | 96</td>
+        </tr>
+        <tr>
+            <td>64</td>
+            <td>EDMI</td>
+            <td>430</td>
+            <td>POWER</td>
+            <td>05 | 
+            
+<tr>
+                <td>65</td>
+                <td>EDMI</td>
+                <td>430</td>
+                <td>TARIFF INDEX</td>
+                <td>13 | 05</td>
+            </tr>
+            <tr>
+                <td>66</td>
+                <td>EDMI</td>
+                <td>430</td>
+                <td>LAST RELAY REASON</td>
+                <td>07</td>
+            </tr>
+            <tr>
+                <td>67</td>
+                <td>EDMI</td>
+                <td>430</td>
+                <td>Meter Number</td>
+                <td>98</td>
+            </tr>
+            <tr>
+                <td>68</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>ENERGY CONSUMPTION</td>
+                <td>06</td>
+            </tr>
+            <tr>
+                <td>69</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>VOLTAGE</td>
+                <td>61 | 62 | 63</td>
+            </tr>
+            <tr>
+                <td>70</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>CURRENT</td>
+                <td>58 | 59 | 60</td>
+            </tr>
+            <tr>
+                <td>71</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>POWER</td>
+                <td>55 | 56 | 57</td>
+            </tr>
+            <tr>
+                <td>72</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>TARIFF INDEX</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>73</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>POWER LIMIT TOKEN</td>
+                <td>11</td>
+            </tr>
+            <tr>
+                <td>74</td>
+                <td>EDMI 3 PHASE</td>
+                <td>431</td>
+                <td>LAST TOP UP CREDIT AMOUNT</td>
+                <td>90 - 99</td>
+            </tr>
+            <tr>
+                <td>75</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Reject_1</td>
+                <td>Token zimekataliwa kuingia. Thibitisha na Mteja. Fungua taarifa ikishindikana.</td>
+            </tr>
+            <tr>
+                <td>76</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Reject_2</td>
+                <td>Mita imeshinda kuziwezesha token kutafsiriwa na Mita. Fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>77</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Reject_3</td>
+                <td>Token ni za DDTK type haziwezi kubaliwa na Mita. Fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>78</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Reject_4</td>
+                <td>Kuna makosa kwenye mpangilio wa Token zilizotengenezwa. Fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>79</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Reject_5</td>
+                <td>Token za kufanyia mabadiliko ya mita haziko sawa. Fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>80</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Used</td>
+                <td>Token zimekwisha tumika. Thibitisha na mteja. Ikishindikana fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>81</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Old</td>
+                <td>Kuna Token zilinunuliwa hazijaingizwa badala yake zimeingizwa za hivi karibuni. Thibitisha muda wa Token. Fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>82</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Err 88 | Connecting…</td>
+                <td>Kwanza hakikisha kuna umeme eneo hilo. CIU haina mawasiliano na Mita. Zitumike battery mpya zenye nguvu kisha abonyeze 59698686 ikifuatiwa na namba ya Mita yote kisha abonyeze OK. Ikishindikana fungua taarifa.</td>
+            </tr>
+            <tr>
+                <td>83</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>TARIFF INDEX</td>
+                <td>078</td>
+            </tr>
+            <tr>
+                <td>84</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>SALIO</td>
+                <td>003</td>
+            </tr>
+            <tr>
+                <td>85</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>VOLTAGE</td>
+                <td>004</td>
+            </tr>
+            <tr>
+                <td>86</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>CURRENT</td>
+                <td>005</td>
+            </tr>
+            <tr>
+                <td>87</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>LAST CREDIT TOKEN</td>
+                <td>049 - 058</td>
+            </tr>
+            <tr>
+                <td>88</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>RELAY OPEN REASON</td>
+                <td>095</td>
+            </tr>
+            <tr>
+                <td>89</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>ENERGY CONSUMPTION</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>90</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+            <tr>
+                <td>91</td>
+                <td>INHEMETER</td>
+                <td>37</td>
+                <td>SUPPLY GROUP CODE</td>
+                <td>079</td>
+            </tr>
+            <tr>
+                <td>92</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>ENERGY CONSUMPTION</td>
+                <td>005</td>
+            </tr>
+            <tr>
+                <td>93</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>VOLTAGE</td>
+                <td>070 | 072 | 072</td>
+            </tr>
+            <tr>
+                <td>94</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>CURRENT</td>
+                <td>073 | 074 | 075</td>
+            </tr>
+            <tr>
+                <td>95</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>POWER</td>
+                <td>077 | 078 | 079</td>
+            </tr>
+            <tr>
+                <td>96</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>TARIFF INDEX</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>97</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>SUPPLY GROUP CODE</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>98</td>
+                <td>INHEMETER 3 PHASE</td>
+                <td>37</td>
+                <td>Meter Number</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>99</td>
+                <td>LANDIS/ACTARIS</td>
+                <td>01</td>
+                <td>Salio</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>100</td>
+                <td>LANDIS/ACTARIS</td>
+                <td>01</td>
+                <td>ENERGY CONSUMPTION</td>
+                <td>003</td>
+            </tr>
+ <tr>
+            <td>101</td>
+            <td>LANDIS/ACTARIS</td>
+            <td>01</td>
+            <td>POWER</td>
+            <td>001</td>
+        </tr>
+        <tr>
+            <td>102</td>
+            <td>LANDIS/ACTARIS</td>
+            <td>01</td>
+            <td>TARIFF INDEX</td>
+            <td>058</td>
+        </tr>
+        <tr>
+            <td>103</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>TARIFF INDEX</td>
+            <td>001 | 809</td>
+        </tr>
+        <tr>
+            <td>104</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Salio</td>
+            <td>006 | 801</td>
+        </tr>
+        <tr>
+            <td>105</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>VOLTAGE</td>
+            <td>012 | 870</td>
+        </tr>
+        <tr>
+            <td>106</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>CURRENT</td>
+            <td>015 | 874</td>
+        </tr>
+        <tr>
+            <td>107</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Meter Number</td>
+            <td>000 | 804</td>
+        </tr>
+        <tr>
+            <td>108</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>SUPPLY GROUP CODE</td>
+            <td>003 | 805</td>
+        </tr>
+        <tr>
+            <td>109</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>LAST CREDIT TOKEN</td>
+            <td>830 | 849</td>
+        </tr>
+        <tr>
+            <td>110</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>RELAY OPEN REASON</td>
+            <td>095</td>
+        </tr>
+        <tr>
+            <td>111</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>002</td>
+        </tr>
+        <tr>
+            <td>112</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>COMMISION CODE</td>
+            <td>865</td>
+        </tr>
+        <tr>
+            <td>113</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>01</td>
+            <td>Mita haina salio.</td>
+        </tr>
+        <tr>
+            <td>114</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>02</td>
+            <td>Mita haina salio.</td>
+        </tr>
+        <tr>
+            <td>115</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>03</td>
+            <td>Mita imezidiwa na kiwango cha umeme.</td>
+        </tr>
+        <tr>
+            <td>116</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>04</td>
+            <td>Error inayoletwa baada ya kuingiza STS (Standard Transfer Specification Test)</td>
+        </tr>
+        <tr>
+            <td>117</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>05 | 06</td>
+            <td>Mita iko Tampered. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>118</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>07</td>
+            <td>Mita iko disconnected kwenye huduma ya umeme. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>119</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>08</td>
+            <td>Mita haijaruhusiwa kufanya kazi. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>120</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>09 | 31</td>
+            <td>Mita imezidiwa na kiwango cha matumizi ya vifaa vya mteja, asubiri dakika 5 itawaka baada ya kuzima vifaa. Fungua taarifa ikigoma.</td>
+        </tr>
+        <tr>
+            <td>121</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>11</td>
+            <td>High Voltage (Above 253v) Umeme mkubwa. Mteja asubiri kwa muda flani. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>122</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>12</td>
+            <td>Under Voltage (Below 130v) Umeme mdogo. Mteja asubiri kwa muda flani. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>123</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>13</td>
+            <td>Changamoto ya mkondo wa umeme. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>124</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>15</td>
+            <td>Kuna kifaa chenye hadhi ya Sumaku kimewekwa jirani na Mita. Shauri mteja atoe kifaa hicho, ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>125</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>17</td>
+            <td>Mteja mefanya 'Bypassing'. Kuna wizi wa umeme umefanyika. Fungua taarifa na fikisha taarifa kwa Supervisor haraka.</td>
+        </tr>
+        <tr>
+            <td>126</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>18</td>
+            <td>Mkondo wa umeme unaoingia kwenye Mita hauko sawa na unaotoka. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>127</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>21</td>
+            <td>Ufuniko wa Mita haujafungwa. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>128</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>0</td>
+            <td>Kukatika kwa umeme kwa namna isiyo ya kawaida.</td>
+        </tr>
+        <tr>
+            <td>129</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Reject</td>
+            <td>Token zimekataliwa kuingia kwenye Mita. Thibitisha na Mteja. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>130</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Used</td>
+            <td>Token zimekwisha tumika. Thibitisha na mteja. Ikishindikana fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>131</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Old</td>
+            <td>Kuna Token zilinunuliwa hazijaingizwa badala yake zimeingizwa za hivi karibuni. Thibitisha muda wa Token. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>132</td>
+            <td>SF HEXING</td>
+            <td>14 | 92</td>
+            <td>Err 04</td>
+            <td>Kiwango cha Unit kimezidi kiwango cha Mita inavyoweza kupokea.</td>
+        </tr>
+        <tr>
+            <td>133</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>TARIFF INDEX</td>
+            <td>001 | 809</td>
+        </tr>
+        <tr>
+            <td>134</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>Salio</td>
+            <td>006 | 801</td>
+        </tr>
+        <tr>
+            <td>135</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>VOLTAGE</td>
+            <td>012 | 013 | 014</td>
+        </tr>
+        <tr>
+            <td>136</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>CURRENT</td>
+            <td>015 | 016 | 017</td>
+        </tr>
+        <tr>
+            <td>137</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>Meter Number</td>
+            <td>000 | 804</td>
+        </tr>
+        <tr>
+            <td>138</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>SUPPLY GROUP CODE</td>
+            <td>003 | 805</td>
+        </tr>
+        <tr>
+            <td>139</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>LAST CREDIT TOKEN</td>
+            <td>830 | 849</td>
+        </tr>
+        <tr>
+            <td>140</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>RELAY OPEN REASON</td>
+            <td>095</td>
+        </tr>
+        <tr>
+            <td>141</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>002</td>
+        </tr>
+        <tr>
+            <td>142</td>
+            <td>SF HEXING 3 PHASE</td>
+            <td>14 | 92</td>
+            <td>COMMISION CODE</td>
+            <td>865</td>
+        </tr>
+        <tr>
+            <td>143</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>PRESENT UNITS</td>
+            <td>07</td>
+        </tr>
+        <tr>
+            <td>144</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>01</td>
+        </tr>
+        <tr>
+            <td>145</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>VOLTAGE</td>
+            <td>04</td>
+        </tr>
+        <tr>
+            <td>146</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>CURRENT</td>
+            <td>05</td>
+        </tr>
+        <tr>
+            <td>147</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>POWER</td>
+            <td>31</td>
+        </tr>
+        <tr>
+            <td>148</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>TARIFF INDEX</td>
+            <td>81</td>
+        </tr>
+        <tr>
+            <td>149</td>
+            <td>STAR</td>
+            <td>22</td>
+            <td>Error ukiweka token "USED"</td>
+            <td>Andika 0 ziwe 16.</td>
+        </tr>
+        <tr>
+            <td>150</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>Relay Test</td>
+            <td>01</td>
+        </tr>
+        <tr>
+            <td>151</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>TARIFF INDEX</td>
+            <td>05</td>
+        </tr>
+        <tr>
+            <td>152</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>Tampering Status</td>
+            <td>08</td>
+        </tr>
+        <tr>
+            <td>153</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>Salio</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>154</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td>155</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>VOLTAGE</td>
+            <td>41</td>
+        </tr>
+        <tr>
+            <td>156</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>CURRENT</td>
+            <td>44</td>
+        </tr>
+        <tr>
+            <td>157</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>NEUTRAL CURRENT</td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>158</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>Meter Number</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>159</td>
+            <td>TROPICAL (YTL)</td>
+            <td>441</td>
+            <td>SUPPLY GROUP CODE</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>160</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>Relay Test</td>
+            <td>01</td>
+        </tr>
+        <tr>
+            <td>161</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>TARIFF INDEX</td>
+            <td>05</td>
+        </tr>
+        <tr>
+            <td>162</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>Tampering Status</td>
+            <td>08</td>
+        </tr>
+        <tr>
+            <td>163</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>Salio</td>
+            <td>37</td>
+        </tr>
+        <tr>
+            <td>164</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>ENERGY CONSUMPTION</td>
+            <td>38</td>
+        </tr>
+        <tr>
+            <td>165</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>VOLTAGE</td>
+            <td>41 | 42 | 43</td>
+        </tr>
+        <tr>
+            <td>166</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>CURRENT</td>
+            <td>44 | 45 | 46</td>
+        </tr>
+        <tr>
+            <td>167</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>NEUTRAL CURRENT</td>
+            <td>47</td>
+        </tr>
+        <tr>
+            <td>168</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>Meter Number</td>
+            <td>75</td>
+        </tr>
+        <tr>
+            <td>169</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>SUPPLY GROUP CODE</td>
+            <td>77</td>
+        </tr>
+        <tr>
+            <td>170</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>LAST CREDIT TOKEN</td>
+            <td>54 - 58</td>
+        </tr>
+        <tr>
+            <td>171</td>
+            <td>TROPICAL (YTL) 3 PHASE</td>
+            <td>449</td>
+            <td>TOTAL TOKEN ACCEPTED</td>
+            <td>53</td>
+        </tr>
+        <tr>
+            <td>172</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 77</td>
+            <td>Mita haina mawasiliano na CIU. Mteja aweke battery mpya kisha abonyeze ZERO + Namba ya Mita + ZERO + Namba ya mita kisha OK au 06450645 kisha OK.</td>
+        </tr>
+        <tr>
+            <td>173</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 18</td>
+            <td>UFUNIKO WA TERMINAL UKO WAZI, Fungua ticket.</td>
+        </tr>
+        <tr>
+            <td>174</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 01</td>
+            <td>Idadi ya namba za Token haiko sawa. Thibitisha na mteja.</td>
+        </tr>
+        <tr>
+            <td>175</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 02</td>
+            <td>Token zimetengenezwa kimakosa kwenye LUKU system. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>176</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 03</td>
+            <td>Token zilizotengenezwa na mfumo haziendani na Mita ya mteja. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>177</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 04</td>
+            <td>Token zimeshatumika. Thibitisha na mteja.</td>
+        </tr>
+        <tr>
+            <td>178</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 06</td>
+            <td>Mita inahitaji Key Change ili itambue Token zilizonunuliwa/zitakazo nunuliwa.</td>
+        </tr>
+        <tr>
+            <td>179</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 07</td>
+            <td>Unit zilizoingizwa zimevuka ukomo wa mwisho wa mita kuhifadhi. Shauri mteja atumie unit zilizopo kwanza zipungue. Fungua taarifa ikishindikana.</td>
+        </tr>
+        <tr>
+            <td>180</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 09</td>
+            <td>Token haziendani na namba ya Mita. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>181</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 14</td>
+            <td>Key Change token sio sahihi kutoka kwenye LUKU system. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>182</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 15</td>
+            <td>Token zilizoingizwa sio za Mita ya umeme. Thibitisha na mteja.</td>
+        </tr>
+        <tr>
+            <td>183</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 17</td>
+            <td>Token zimetengenezwa kabla ya Mita kutengenezwa. Fungua taarifa.</td>
+        </tr>
+        <tr>
+            <td>184</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 20</td>
+            <td>Mteja amechelewa kuingiza namba za Token kwenye Mita yake kwa muda huo.</td>
+        </tr>
+        <tr>
+            <td>185</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 21</td>
+            <td>Token hazifanyi kazi sababu modeli ya Mita imebadilishwa. Fungua taarifa Kwenda emergency.</td>
+        </tr>
+        <tr>
+            <td>186</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 25</td>
+            <td>Keypad za Mita zimefungwa (Locked). Refresh mita ya mteja. Ikishindikana fungua taarifa kwenda emergency.</td>
+        </tr>
+        <tr>
+            <td>187</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 26</td>
+            <td>Kuna kitu kimefanyika kinyume na sheria za utumizi wa Mita. Mteja afike ofisini.</td>
+        </tr>
+        <tr>
+            <td>188</td>
+            <td>Wasion</td>
+            <td>2421|2431</td>
+            <td>Err 27</td>
+            <td>Mkondo wa umeme unaoingia na unaotoka haulingani. Fungua taarifa kwenda emergency.</td>
+        </tr>
+        <tr>
+                <td>189</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>ENERGY CONSUMPTION</td>
+                <td>002</td>
+            </tr>
+            <tr>
+                <td>190</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>VOLTAGE</td>
+                <td>004</td>
+            </tr>
+            <tr>
+                <td>191</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>CURRENT</td>
+                <td>005</td>
+            </tr>
+            <tr>
+                <td>192</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>POWER</td>
+                <td>006</td>
+            </tr>
+            <tr>
+                <td>193</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>TARIFF INDEX</td>
+                <td>80</td>
+            </tr>
+            <tr>
+                <td>194</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>TRIPPING CODE</td>
+                <td>201</td>
+            </tr>
+            <tr>
+                <td>195</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>Salio</td>
+                <td>003 | 006 | 007</td>
+            </tr>
+            <tr>
+                <td>196</td>
+                <td>Wasion</td>
+                <td>2421|2431</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+            <tr>
+                <td>197</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>VOLTAGE</td>
+                <td>070 | 071 | 072 | 282</td>
+            </tr>
+            <tr>
+                <td>198</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>CURRENT</td>
+                <td>073 | 074 | 075 | 282</td>
+            </tr>
+            <tr>
+                <td>199</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>POWER</td>
+                <td>077 | 078 | 079</td>
+            </tr>
+            <tr>
+                <td>200</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>SUPPLY GROUP CODE</td>
+                <td>010 | 082</td>
+            </tr>
+            <tr>
+                <td>201</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>TARIFF INDEX</td>
+                <td>002 | 081</td>
+            </tr>
+            <tr>
+                <td>202</td>
+                <td>Wasion</td>
+                <td>2421|2431  3 PHASE</td>
+                <td>Meter Number</td>
+                <td>001</td>
+            </tr>
+            <tr>
+                <td>203</td>
+                <td>TROPICAL (YTL)</td>
+                <td>44</td>
+                <td>Refreshing Code</td>
+                <td>369 unganisha na namba ya mita kisha ok.</td>
+            </tr>
+            <tr>
+                <td>204</td>
+                <td>SF HEXING</td>
+                <td>14</td>
+                <td>Refreshing Code</td>
+                <td>865 unganisha na namba ya mita kisha ok.</td>
+            </tr>
+            <tr>
+                <td>205</td>
+                <td>GSD</td>
+                <td>47</td>
+                <td>Refreshing Code</td>
+                <td>Meter namba yenyewe kisha ok.</td>
+            </tr>
+            <tr>
+                <td>206</td>
+                <td>ACTARIS</td>
+                <td>32</td>
+                <td>Refreshing Code</td>
+                <td>Meter namba yenyewe kisha ok.</td>
+            </tr>
+            <tr>
+                <td>207</td>
+                <td>ACTARIS</td>
+                <td>90</td>
+                <td>Refreshing Code</td>
+                <td>Meter namba yenyewe kisha ok.</td>
+            </tr>
+            <tr>
+                <td>208</td>
+                <td>ACTARIS</td>
+                <td>92</td>
+                <td>Refreshing Code</td>
+                <td>Meter namba yenyewe kisha ok.</td>
+            </tr>
+            <tr>
+                <td>209</td>
+                <td>LANDIS/ACTARIS</td>
+                <td>01</td>
+                <td>CALL...</td>
+                <td>Mfungulie mteja taarifa kwenda Emergency.</td>
+            </tr>
+            <tr>
+                <td>210</td>
+                <td>EDMI 3 PHASE</td>
+                <td>4311/12/13/14/15/16/17/18/19</td>
+                <td>Closing Relay</td>
+                <td>Bonyeza 'Enter' itaanza kuhessabu kutoka 9-0 alafu italeta neno 1 close kisha bonyeza no. 1</td>
+            </tr>
+             <tr>
+                <td>211</td>
+                <td>GSD</td>
+                <td>47</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+            <tr>
+                <td>212</td>
+                <td>ACTARIS</td>
+                <td>32</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+             <tr>
+                <td>213</td>
+                <td>ACTARIS</td>
+                <td>90</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+             <tr>
+                <td>214</td>
+                <td>ACTARIS</td>
+                <td>92</td>
+                <td>Meter Number</td>
+                <td>000</td>
+            </tr>
+             <tr>
+                <td>215</td>
+                <td>EDMIS</td>
+                <td>4300/43000</td>
+                <td>Closing Relay</td>
+                <td>2901</td>
+            </tr>
+             <tr>
+                <td>216</td>
+                <td>LANDIS/ACTARIS</td>
+                <td>01</td>
+                <td>No Power Single</td>
+                <td>Muulize mteja kama anakosa umeme peke yake, hakikisha mteja ana unit, angalia circuit breaker/Main Switch, tatizo likiendelea fungua taarifa kwenda Emergency.</td>
+            </tr>
+             <tr>
+                <td>217</td>
+                <td>ACTARIS</td>
+                <td>07</td>
+                <td>No Power Single</td>
+                <td>Muulize mteja kama anakosa umeme peke yake, hakikisha mteja ana unit, angalia circuit breaker/Main Switch, tatizo likiendelea fungua taarifa kwenda Emergency.</td>
+            </tr>
+            <tr>
+                <td>218</td>
+                <td>CONLOG</td>
+                <td>04</td>
+                <td>No Power Single</td>
+                <td>Muulize mteja kama anakosa umeme peke yake, hakikisha mteja ana unit, angalia circuit breaker/Main Switch, tatizo likiendelea fungua taarifa kwenda Emergency.</td>
+            </tr>
+             <tr>
+                <td>219</td>
+                <td>STAR</td>
+                <td>22</td>
+                <td>No Power Single</td>
+                <td>Mteja azime na kuwasha circuit breaker ya mita, tatizo likiendelea fungua taarifa kwenda emergency.</td>
+            </tr>
+             <tr>
+                <td>220</td>
+                <td>All Meters</td>
+                <td>37/24/4301/4302/4302/4303</td>
+                <td>No Power Single</td>
+                <td>Muulize mteja kama anakosa umeme peke yake, hakikisha mteja ana unit, angalia circuit breaker/Main Switch, tatizo likiendelea abonyeze 00000000000150997584 fungua taarifa kwenda Emergency.</td>
+            </tr>
+             <tr>
+                <td>221</td>
+                <td>All Meters</td>
+                <td>54/30/32/90/92/44/14/47</td>
+                <td>No Power Single</td>
+                <td>Muulize mteja kama anakosa umeme peke yake, hakikisha mteja ana unit, angalia circuit breaker/Main Switch, tatizo likiendelea abonyeze 00000000000150997584 fungua taarifa kwenda Emergency.</td>
+            </tr>
+
+
+</tbody>
+        </table>
+    </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

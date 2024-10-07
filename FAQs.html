@@ -1,0 +1,194 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VHZ7TCXTM');
+ </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                <th>No.</th>
+                <th>Swali</th>
+                <th>Jibu</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>Sababu zipi zitafanya mteja kukatiwa Umeme?</td><td>Wizi wa Umeme, Madeni na uvunjaji wa makubaliano ya mkataba baina ya TANESCO na Mteja kwenye maeneo mengine.</td></tr>
+            <tr><td>2</td><td>Siku gani Umeme utakatwa baada ya ukiukaji?</td><td>Siku za kazi (Kabla ya kufika saa 7 mchana) ukiondoa siku za sikukuu za jumuiya na mwisho wa wiki (Jumamosi na Jumapili).</td></tr>
+            <tr><td>3</td><td>Muda wa kurudisha Umeme baada ya kukatiwa kwa sababu za ukiukaji.</td><td>Mara tu malipo yakifanyika Umeme utarejeshwa.</td></tr>
+            <tr><td>4</td><td>Kodi ya Jengo (PTD) ni ya nani?</td><td>Sio ya TANESCO. Kodi hii inasimamiwa na Mamlaka ya udhibiti wa mapato TRA.</td></tr>
+            <tr><td>5</td><td>Kodi ya Jengo (PTD) kwa nyumba ya kawaida?</td><td>18,000 kwa Mwaka ambayo ni 1,500 kwa Mwezi.</td></tr>
+            <tr><td>6</td><td>Kodi ya Jengo (PTD) kwa nyumba ya Ghorofa?</td><td>90,000 kwa floor moja kwa Mwaka ambayo ni 7,500 kwa Mwezi.</td></tr>
+            <tr><td>7</td><td>MID (Meter Installation Debt) ni nini?</td><td>MID hili ni deni la Units ambazo Mteja anazofungiwa nazo Mita, atalipia akinunua umeme kwa mara ya kwanza.</td></tr>
+            <tr><td>8</td><td>PTD (Property Debt) ni nini?</td><td>PTD ni deni la Kodi ya Jengo inayokatwa kwenye manunuzi ya Umeme kila mwezi. Huanza tarehe 1 Mwezi wa 7 mpaka mwisho wa mwezi wa 6.</td></tr>
+            <tr><td>9</td><td>NTL (Non Technical Loss) ni nini?</td><td>NTL ni deni la upotevu wa Umeme uliosababishwa na mteja.</td></tr>
+            <tr><td>10</td><td>OSD_DONOTUSE (Old System Debt) ni nini?</td><td>OSD ni deni la Mita za miaka ya nyuma.</td></tr>
+            <tr><td>11</td><td>CMD (Conventional Meter Debt) ni nini?</td><td>CMD ni deni la Mita zisizo za LUKU (Mita za kusomwa kila mwezi au Post Paid Meters).</td></tr>
+            <tr><td>12</td><td>SCD (Service Charge Debt) ni nini?</td><td>SCD ni deni la Gharama za Huduma.</td></tr>
+            <tr><td>13</td><td>SLD (Service Line Debt)</td><td>SLD ni deni lililotengenezwa na machakato wa kuungiwa Umeme.</td></tr>
+            <tr><td>14</td><td>TRD (Token Recovery Debt)</td><td>TRD ni deni linalohusu Token zilizotumika kinyume na utaratibu. Mfano:- Token zilizotengenezwa na kutumiwa bila malipo.</td></tr>
+            <tr><td>15</td><td>P-Cut (Power Cut) ni nini?</td><td>P-Cut inaamanisha battery za CIU hazina nguvu, mteja abadili kwa kuweka battery mpya.</td></tr>
+            <tr><td>16</td><td>Sleep (Kwenye CIU) ni nini?</td><td>Sleep (Kwenye CIU) inaamanisha battery za CIU hazina nguvu, mteja abadili kwa kuweka battery mpya.</td></tr>
+            <tr><td>17</td><td>SBBS (Service Back Before Servicing) ni nini?</td><td>SBBS inamaa ya kwamba Huduma aliyokuwa akiihitaji mteja imerejea kabla ya mafundi kumpatia msaada.</td></tr>
+            <tr><td>18</td><td>CP (Corrosion on Pole) ni nini?</td><td>CP ni ukungu unaotengenezwa kwenye maungio ya nyaya za nguzo unaopelekea umeme kushindwa kusafiri ipasavyo.</td></tr>
+            <tr><td>19</td><td>C/P/N/P (Corrosion of Phase and Neutral on Pole) ni nini?</td><td>Ukungu unaotengenezwa kwenye maungio ya nyaya za Neutral kwenye nguzo unaopelekea umeme kushindwa kusafiri ipasavyo.</td></tr>
+            <tr><td>20</td><td>C/Q/N/P (Corrosion of Phase and Neutral on Pole) ni nini?</td><td>Ukungu unaotengenezwa kwenye maungio ya nyaya za Neutral kwenye nguzo unaopelekea umeme kushindwa kusafiri ipasavyo.</td></tr>
+            <tr><td>21</td><td>TF (Transformer)</td><td>Hii ni Transformer. Yaweza kuwa Chocheo au Pozo.</td></tr>
+            <tr><td>22</td><td>PG Clemps/Connector</td><td>Hiki kifaa kinatumika kuunganisha nyaya.</td></tr>
+            <tr><td>23</td><td>LV (Low Voltage)</td><td>Hii ni Voltage ya kiwango cha chini.</td></tr>
+            <tr><td>24</td><td>HT Fuse (High Tension Fuse)</td><td>Hii ni Voltage ya kiwango cha juu.</td></tr>
+            <tr><td>25</td><td>LT Fuse (Low Tension Fuse)</td><td>Hii ni kiyeyushi kinga wakati umeme unapozidi kiwango cha kawaida.</td></tr>
+            <tr><td>26</td><td>HT (High Tension)</td><td>Hii ni umeme wa msongo mkubwa.</td></tr>
+            <tr><td>27</td><td>LT (Low Tension)</td><td>Hii ni umeme wa msongo mdogo au wa kawaida.</td></tr>
+            <tr><td>28</td><td>TOP CHANGER (Tapping Wires/Lines)</td><td>Ni kitendo cha kubadili muelekeo wa line.</td></tr>
+            <tr><td>29</td><td>Feeder</td><td>Hii hutumika kusambaza umeme kutoka kwenye kitui cha kupoza na kusambaza umeme.</td></tr>
+            <tr><td>30</td><td>Jumper (Divirger)</td><td>Hii ni kivushio cha umeme kutoka upande mmoja wa nguzo kwenda upande wa pili wa nguzo.</td></tr>
+            <tr><td>31</td><td>Line Patrol</td><td>Hiki ni kitendo cha kufanya uchunguzi kubaini chanzo cha hitilafu.</td></tr>
+            <tr><td>32</td><td>Kufahamu Meter Namba</td><td>Mteja abonyeze 000, 001, 804, 75, 068, 04, 98</td></tr>
+            <tr><td>33</td><td>DROP N ni nini?</td><td>Live na Neutral zinapitisha umeme, fungua taarifa kwenda Emergency (High priority).</td></tr>
+            <tr><td>34</td><td>Utaratibu wa kubadilisha taarifa za usajili wa mita ni upi?</td><td>Mteja anatakiwa afike ofisi ya Tanesco inayomuhudumia akiwa na nyaraka za umiliki (wa zamani na sasa) pamoja na nakala za vitambulisho vya mmiliki wa sasa.</td></tr>
+        </tbody>
+    </table>
+
+ </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>

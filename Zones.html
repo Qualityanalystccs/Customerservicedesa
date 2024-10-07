@@ -1,0 +1,3018 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7VHZ7TCXTM"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-7VHZ7TCXTM');
+ </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        .logo {
+            width: 80px; /* Reduced size of the Home icon */
+            height: auto;
+        }
+        .tan-logo {
+            width: 150px; /* Further reduced size of the TANESCO logo */
+            height: auto;
+        }
+        .title-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+        }
+        h2 {
+            text-align: center; /* Center the title */
+            color: green; /* Change text color */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        .search-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+        .search-input {
+            padding: 8px;
+            font-size: 16px;
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .table-container {
+            margin: 20px;
+            max-width: 100%;
+            overflow-x: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        /* Responsive design */
+        @media (max-width: 600px) {
+            .search-input {
+                width: 100%; /* Full width on smaller screens */
+            }
+            .tan-logo {
+                width: 80px; /* Smaller logo on small devices */
+            }
+            h2 {
+                font-size: 20px; /* Smaller font size for title */
+            }
+        }
+        @media (min-width: 601px) and (max-width: 1024px) {
+            .tan-logo {
+                width: 120px; /* Medium size logo for tablets */
+            }
+            h2 {
+                font-size: 24px; /* Medium font size for title */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html">
+            <img src="Home.PNG" alt="Home" class="logo"/>
+        </a>
+        <div class="title-container">
+            <h2>TANESCO ZONES, REGIONS, DISTRICTS AND SUB-OFFICES</h2>
+        </div>
+        <img src="Tanescoo.PNG" alt="TANESCO Logo" class="tan-logo"/>
+    </div>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
+    </div>
+
+    <div class="table-container">
+        <table id="dataTable">
+            <thead>
+                <tr>
+                    <th>No.</th>
+                    <th>Zones</th>
+                    <th>Regions</th>
+                    <th>Districts</th>
+                    <th>Cluster or Sub office</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+      <td>1</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>BAHI</td>
+      <td>BAHI</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>CHAMWINO</td>
+      <td>CHAMWINO</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>CHAMWINO</td>
+      <td>ITISO</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>CHEMBA</td>
+      <td>MONDO</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>AREA C</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>HOMBOLO</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>KISASA</td>
+    </tr>
+    <tr>
+      <td>8</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>MKONZE</td>
+    </tr>
+    <tr>
+      <td>9</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>NALA</td>
+    </tr>
+    <tr>
+      <td>10</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>NKUHUNGU</td>
+    </tr>
+    <tr>
+      <td>11</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>UZUNGUNI</td>
+    </tr>
+    <tr>
+      <td>12</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>DODOMA</td>
+      <td>VEYULA &amp; MZAKWE</td>
+    </tr>
+    <tr>
+      <td>13</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>GAIRO</td>
+      <td>GAIRO</td>
+    </tr>
+    <tr>
+      <td>14</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>KITETO</td>
+      <td>KITETO</td>
+    </tr>
+    <tr>
+      <td>15</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>KONDOA</td>
+      <td>KONDOA</td>
+    </tr>
+    <tr>
+      <td>16</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>KONGWA</td>
+      <td>KONGWA</td>
+    </tr>
+    <tr>
+      <td>17</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>KONGWA</td>
+      <td>MKOKA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>18</td>
+      <td>CENTRAL ZONE</td>
+      <td>DODOMA</td>
+      <td>MPWAPWA</td>
+      <td>MALOLO</td>
+    </tr>
+    <tr>
+      <td>19</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>CHITA</td>
+    </tr>
+    <tr>
+      <td>20</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>IDETE</td>
+    </tr>
+    <tr>
+      <td>21</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>IFAKARA OFFICE</td>
+    </tr>
+    <tr>
+      <td>22</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>KIBEREGE</td>
+    </tr>
+    <tr>
+      <td>23</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>MBINGU</td>
+    </tr>
+    <tr>
+      <td>24</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>MNGETA</td>
+    </tr>
+    <tr>
+      <td>25</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>MPANGA</td>
+    </tr>
+    <tr>
+      <td>26</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>IFAKARA</td>
+      <td>UCHINDILE</td>
+    </tr>
+    <tr>
+      <td>27</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOMBERO</td>
+      <td>KILOMBERO</td>
+    </tr>
+    <tr>
+      <td>28</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOMBERO</td>
+      <td>KISANGA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>29</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOMBERO</td>
+      <td>MIKUMI SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>30</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOMBERO</td>
+      <td>MSOWELO</td>
+    </tr>
+    <tr>
+      <td>31</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOSA</td>
+      <td>KILOSA</td>
+    </tr>
+    <tr>
+      <td>32</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOSA</td>
+      <td>MSOWELO MORO</td>
+    </tr>
+    <tr>
+      <td>33</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOSA</td>
+      <td>MULUMA</td>
+    </tr>
+    <tr>
+      <td>34</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>KILOSA</td>
+      <td>ULAYA</td>
+    </tr>
+    <tr>
+      <td>35</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MAHENGE</td>
+      <td>LUPIRO SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>36</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MAHENGE</td>
+      <td>MAHENGE</td>
+    </tr>
+    <tr>
+      <td>37</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MAHENGE</td>
+      <td>MWAYA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>38</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MALINYI</td>
+      <td>MALINYI</td>
+    </tr>
+    <tr>
+      <td>39</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MALINYI</td>
+      <td>MTIMBIRA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>40</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MALINYI</td>
+      <td>NGOHERANGA</td>
+    </tr>
+    <tr>
+      <td>41</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MOROGORO</td>
+      <td>MELELA</td>
+    </tr>
+    <tr>
+      <td>42</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MOROGORO</td>
+      <td>MIKESE</td>
+    </tr>
+    <tr>
+      <td>43</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MOROGORO</td>
+      <td>MORO TOWN</td>
+    </tr>
+    <tr>
+      <td>44</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVOMERO</td>
+      <td>DAKAWA</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVOMERO</td>
+      <td>DUMILA</td>
+    </tr>
+    <tr>
+      <td>46</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVOMERO</td>
+      <td>MVOMERO OFFICE</td>
+    </tr>
+    <tr>
+      <td>47</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVUHA</td>
+      <td>KISAKI</td>
+    </tr>
+    <tr>
+      <td>48</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVUHA</td>
+      <td>MKUYUNI</td>
+    </tr>
+    <tr>
+      <td>49</td>
+      <td>CENTRAL ZONE</td>
+      <td>MOROGORO</td>
+      <td>MVUHA</td>
+      <td>MVUHA</td>
+    </tr>
+    <tr>
+      <td>50</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>IKUNGI</td>
+      <td>IKUNGI OFFICE</td>
+    </tr>
+    <tr>
+      <td>51</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>ITIGI</td>
+      <td>ITIGI</td>
+    </tr>
+    <tr>
+      <td>52</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>ITIGI</td>
+      <td>MITUNDU SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>53</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>KIOMBOI</td>
+      <td>KIOMBOI</td>
+    </tr>
+    <tr>
+      <td>54</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MANYONI</td>
+      <td>CHIKUYU SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>55</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MANYONI</td>
+      <td>HEKA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>56</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MANYONI</td>
+      <td>KINTINKU</td>
+    </tr>
+    <tr>
+      <td>57</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MANYONI</td>
+      <td>MANYONI TOWN</td>
+    </tr>
+    <tr>
+      <td>58</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MANYONI</td>
+      <td>SANZA</td>
+    </tr>
+    <tr>
+      <td>59</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MKALAMA</td>
+      <td>IGUGUNO SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>60</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>MKALAMA</td>
+      <td>MKALAMA</td>
+    </tr>
+    <tr>
+      <td>61</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>SINGIDA</td>
+      <td>GINNERY</td>
+    </tr>
+    <tr>
+      <td>62</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>SINGIDA</td>
+      <td>ILONGERO</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>CENTRAL ZONE</td>
+      <td>SINGIDA</td>
+      <td>SINGIDA</td>
+      <td>SINGIDA TOWN</td>
+    </tr>
+    <tr>
+      <td>64</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>CHANIKA</td>
+      <td>MAGENGE</td>
+    </tr>
+    <tr>
+      <td>65</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>CHANIKA</td>
+      <td>MAJOHE</td>
+    </tr>
+    <tr>
+      <td>66</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>CHANIKA</td>
+      <td>MSONGOLA</td>
+    </tr>
+    <tr>
+      <td>67</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>CHANIKA</td>
+      <td>PUGU</td>
+    </tr>
+    <tr>
+      <td>68</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>GONGO LA MBOTO</td>
+      <td>GONGO LA MBOTO</td>
+    </tr>
+    <tr>
+      <td>69</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>GONGO LA MBOTO</td>
+      <td>KITUNDA</td>
+    </tr>
+    <tr>
+      <td>70</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>GONGO LA MBOTO</td>
+      <td>KIVULE</td>
+    </tr>
+    <tr>
+      <td>71</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>GONGO LA MBOTO</td>
+      <td>MWANAGATI</td>
+    </tr>
+    <tr>
+      <td>72</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>GONGO LA MBOTO</td>
+      <td>ULONGONI</td>
+    </tr>
+    <tr>
+      <td>73</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>ILALA</td>
+      <td>CITY CENTRE NA UPANGA</td>
+    </tr>
+    <tr>
+      <td>74</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>ILALA</td>
+      <td>KARIAKOO</td>
+    </tr>
+    <tr>
+      <td>75</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>INDUSTRIAL</td>
+      <td>KARAKATA &amp; ALONG NYERERE ROAD</td>
+    </tr>
+    <tr>
+      <td>76</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>INDUSTRIAL</td>
+      <td>KIWALANI</td>
+    </tr>
+    <tr>
+      <td>77</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>INDUSTRIAL</td>
+      <td>VINGUNGUTI &amp; BUGURUNI</td>
+    </tr>
+    <tr>
+      <td>78</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>TABATA</td>
+      <td>DAMPO &amp; KISIWANI &amp; BIMA</td>
+    </tr>
+    <tr>
+      <td>79</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>TABATA</td>
+      <td>KIFURU &amp; KINYEREZI</td>
+    </tr>
+    <tr>
+      <td>80</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>TABATA</td>
+      <td>KIMANGA &amp; KISUKURU</td>
+    </tr>
+    <tr>
+      <td>81</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>TABATA</td>
+      <td>LIWITI &amp; CHANG'OMBE &amp; MAGENGENI</td>
+    </tr>
+    <tr>
+      <td>82</td>
+      <td>EAST ZONE</td>
+      <td>ILALA</td>
+      <td>TABATA</td>
+      <td>SEGEREA &amp; BONYOKWA</td>
+    </tr>
+    <tr>
+      <td>83</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>GOBA KULANGWA</td>
+    </tr>
+    <tr>
+      <td>84</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>GOBA MATOSA</td>
+    </tr>
+    <tr>
+      <td>85</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>KUNDUCHI</td>
+    </tr>
+    <tr>
+      <td>86</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>MBEZI</td>
+    </tr>
+    <tr>
+      <td>87</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>MBEZI CHINI</td>
+    </tr>
+    <tr>
+      <td>88</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>MBEZI JUU</td>
+    </tr>
+    <tr>
+      <td>89</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MBEZI BEACH</td>
+      <td>SALASALA</td>
+    </tr>
+    <tr>
+      <td>90</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>KAWE NA LUGALO</td>
+    </tr>
+    <tr>
+      <td>91</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>KIJITONYAMA NA SINZA</td>
+    </tr>
+    <tr>
+      <td>92</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>KINONDONI</td>
+    </tr>
+    <tr>
+      <td>93</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>MAKUMBUSHO NA MWANANYAMALA</td>
+    </tr>
+    <tr>
+      <td>94</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>MASAKI NA OYSTERBAY</td>
+    </tr>
+    <tr>
+      <td>95</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>MIKOCHENI NA REGENCY</td>
+    </tr>
+    <tr>
+      <td>96</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>MSASANI</td>
+    </tr>
+    <tr>
+      <td>97</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>MIKOCHENI</td>
+      <td>MWENGE NA MIKOCHENI VIWANDANI</td>
+    </tr>
+    <tr>
+      <td>98</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>BOKO</td>
+    </tr>
+    <tr>
+      <td>99</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>BUNJU</td>
+    </tr>
+    <tr>
+      <td>100</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>MABWEPANDE &amp; KINONDO</td>
+    </tr>
+    <tr>
+      <td>101</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>MADALE</td>
+    </tr>
+    <tr>
+      <td>102</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>MBWENI</td>
+    </tr>
+    <tr>
+      <td>103</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>TEGETA</td>
+    </tr>
+    <tr>
+      <td>104</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI NORTH</td>
+      <td>TEGETA</td>
+      <td>WAZO</td>
+    </tr>
+    <tr>
+      <td>105</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIBAMBA</td>
+      <td>KIBAMBA</td>
+    </tr>
+    <tr>
+      <td>106</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIBAMBA</td>
+      <td>KWEMBE</td>
+    </tr>
+    <tr>
+      <td>107</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIBAMBA</td>
+      <td>MBEZI</td>
+    </tr>
+    <tr>
+      <td>108</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIBAMBA</td>
+      <td>MPIJI</td>
+    </tr>
+    <tr>
+      <td>109</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIBAMBA</td>
+      <td>MSUMI</td>
+    </tr>
+    <tr>
+      <td>110</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIMARA</td>
+      <td>KOROGWE KULIA/KUSHOTO</td>
+    </tr>
+    <tr>
+      <td>111</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIMARA</td>
+      <td>MALAMBA MAWILI</td>
+    </tr>
+    <tr>
+      <td>112</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIMARA</td>
+      <td>MBEZI LUIS</td>
+    </tr>
+    <tr>
+      <td>113</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>KIMARA</td>
+      <td>SUKA KULIA/KUSHOTO</td>
+    </tr>
+    <tr>
+      <td>114</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>MAGOMENI</td>
+      <td>KIBANGU</td>
+    </tr>
+    <tr>
+      <td>115</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>MAGOMENI</td>
+      <td>MABIBO</td>
+    </tr>
+    <tr>
+      <td>116</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>MAGOMENI</td>
+      <td>MAGOMENI</td>
+    </tr>
+    <tr>
+      <td>117</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>MAGOMENI</td>
+      <td>MAKONGO</td>
+    </tr>
+    <tr>
+      <td>118</td>
+      <td>EAST ZONE</td>
+      <td>KINONDONI SOUTH</td>
+      <td>MAGOMENI</td>
+      <td>SINZA</td>
+    </tr>
+    <tr>
+      <td>119</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>BAGAMOYO</td>
+      <td>BAGAMOYO OFFICE</td>
+    </tr>
+    <tr>
+      <td>120</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>BAGAMOYO</td>
+      <td>MAPINGA</td>
+    </tr>
+    <tr>
+      <td>121</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>BAGAMOYO</td>
+      <td>ZINGA</td>
+    </tr>
+    <tr>
+      <td>122</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>CHALINZE</td>
+      <td>KIWANGWA</td>
+    </tr>
+    <tr>
+      <td>123</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>CHALINZE</td>
+      <td>LUGOBA</td>
+    </tr>
+    <tr>
+      <td>124</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>CHALINZE</td>
+      <td>MAGINDU</td>
+    </tr>
+    <tr>
+      <td>125</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>CHALINZE</td>
+      <td>MDAHULA</td>
+    </tr>
+    <tr>
+      <td>126</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>IKWIRIRI</td>
+      <td>IKWIRIRI OFFICE</td>
+    </tr>
+    <tr>
+      <td>127</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBAHA</td>
+      <td>KILUVYA</td>
+    </tr>
+    <tr>
+      <td>128</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBAHA</td>
+      <td>KONGOWE</td>
+    </tr>
+    <tr>
+      <td>129</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBAHA</td>
+      <td>KWA MFIPA + MIEMBE SABA</td>
+    </tr>
+    <tr>
+      <td>130</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBAHA</td>
+      <td>MAILIMOJA</td>
+    </tr>
+    <tr>
+      <td>131</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBAHA</td>
+      <td>MATHIAS</td>
+    </tr>
+    <tr>
+      <td>132</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBITI</td>
+      <td>BUNGU</td>
+    </tr>
+    <tr>
+      <td>133</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBITI</td>
+      <td>HANGA</td>
+    </tr>
+    <tr>
+      <td>134</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KIBITI</td>
+      <td>KIBITI MJINI</td>
+    </tr>
+    <tr>
+      <td>135</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KISARAWE</td>
+      <td>KISARAWE OFFICE</td>
+    </tr>
+    <tr>
+      <td>136</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KISARAWE</td>
+      <td>MANEROMANGO</td>
+    </tr>
+    <tr>
+      <td>137</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>KISARAWE</td>
+      <td>MZENGA</td>
+    </tr>
+    <tr>
+      <td>138</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MAFIA</td>
+      <td>KILINDONI</td>
+    </tr>
+    <tr>
+      <td>139</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MAFIA</td>
+      <td>KIRONGWE</td>
+    </tr>
+    <tr>
+      <td>140</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MKURANGA</td>
+      <td>MKURANGA OFFICE</td>
+    </tr>
+    <tr>
+      <td>141</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MKURANGA</td>
+      <td>VIKINDU</td>
+    </tr>
+    <tr>
+      <td>142</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MLANDIZI</td>
+      <td>KWALA</td>
+    </tr>
+    <tr>
+      <td>143</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MLANDIZI</td>
+      <td>MISUGUSUGU</td>
+    </tr>
+    <tr>
+      <td>144</td>
+      <td>EAST ZONE</td>
+      <td>PWANI</td>
+      <td>MLANDIZI</td>
+      <td>MLANDIZI OFFICE</td>
+    </tr>
+    <tr>
+      <td>145</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>KIGAMBONI</td>
+      <td>GEZA ULOLE</td>
+    </tr>
+    <tr>
+      <td>146</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>KIGAMBONI</td>
+      <td>KIBADA</td>
+    </tr>
+    <tr>
+      <td>147</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>KIGAMBONI</td>
+      <td>KIMBIJI</td>
+    </tr>
+    <tr>
+      <td>148</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>KIGAMBONI</td>
+      <td>KISARAWE II</td>
+    </tr>
+    <tr>
+      <td>149</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>KIGAMBONI</td>
+      <td>TOANGOMA</td>
+    </tr>
+    <tr>
+      <td>150</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>KIBURUGWA</td>
+    </tr>
+    <tr>
+      <td>151</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>KICHEMCHEM</td>
+    </tr>
+    <tr>
+      <td>152</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>KIJICHI</td>
+    </tr>
+    <tr>
+      <td>153</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>KILUNGULE</td>
+    </tr>
+    <tr>
+      <td>154</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>MBAGALA KUU</td>
+    </tr>
+    <tr>
+      <td>155</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>MBANDE</td>
+    </tr>
+    <tr>
+      <td>156</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>MBR-KONGOWE</td>
+    </tr>
+    <tr>
+      <td>157</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>MBAGALA</td>
+      <td>SAKU</td>
+    </tr>
+    <tr>
+      <td>158</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>CHANG'OMBE</td>
+    </tr>
+    <tr>
+      <td>159</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>KEKO</td>
+    </tr>
+    <tr>
+      <td>160</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>KURASINI</td>
+    </tr>
+    <tr>
+      <td>161</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>MTONGANI</td>
+    </tr>
+    <tr>
+      <td>162</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>SOKOTA</td>
+    </tr>
+    <tr>
+      <td>163</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+      <td>TEMEKE</td>
+    </tr>
+    <tr>
+      <td>164</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>YOMBO</td>
+      <td>BUZA</td>
+    </tr>
+    <tr>
+      <td>165</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>YOMBO</td>
+      <td>KILAKALA</td>
+    </tr>
+    <tr>
+      <td>166</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>YOMBO</td>
+      <td>MAKANGARAWE</td>
+    </tr>
+    <tr>
+      <td>167</td>
+      <td>EAST ZONE</td>
+      <td>TEMEKE</td>
+      <td>YOMBO</td>
+      <td>TANDIKA</td>
+    </tr>
+    <tr>
+      <td>168</td>
+      <td>LAKE ZONE</td>
+      <td>GEITA</td>
+      <td>BUKOMBE</td>
+      <td>BUKOMBE</td>
+    </tr>
+    <tr>
+      <td>169</td>
+      <td>LAKE ZONE</td>
+      <td>GEITA</td>
+      <td>CHATO</td>
+      <td>CHATO</td>
+    </tr>
+    <tr>
+      <td>170</td>
+      <td>LAKE ZONE</td>
+      <td>GEITA</td>
+      <td>GEITA</td>
+      <td>GEITA</td>
+    </tr>
+    <tr>
+      <td>171</td>
+      <td>LAKE ZONE</td>
+      <td>GEITA</td>
+      <td>MBOGWE</td>
+      <td>MBOGWE</td>
+    </tr>
+    <tr>
+      <td>172</td>
+      <td>LAKE ZONE</td>
+      <td>GEITA</td>
+      <td>NYAG'HWALE</td>
+      <td>NYAG'HWALE</td>
+    </tr>
+    <tr>
+      <td>173</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>BIHARAMULO</td>
+      <td>BIHARAMULO</td>
+    </tr>
+    <tr>
+      <td>174</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>BUKOBA</td>
+      <td>BUKOBA</td>
+    </tr>
+    <tr>
+      <td>175</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>KARAGWE</td>
+      <td>KARAGWE</td>
+    </tr>
+    <tr>
+      <td>176</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>KYERWA</td>
+      <td>KYERWA</td>
+    </tr>
+    <tr>
+      <td>177</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>MISENYI</td>
+      <td>MISENYI</td>
+    </tr>
+    <tr>
+      <td>178</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>MULEBA</td>
+      <td>MULEBA</td>
+    </tr>
+    <tr>
+      <td>179</td>
+      <td>LAKE ZONE</td>
+      <td>KAGERA</td>
+      <td>NGARA</td>
+      <td>NGARA</td>
+    </tr>
+    <tr>
+      <td>180</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>BUNDA</td>
+      <td>BUNDA</td>
+    </tr>
+    <tr>
+      <td>181</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>BUTIAMA</td>
+      <td>BUTIAMA</td>
+    </tr>
+    <tr>
+      <td>182</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>MUSOMA</td>
+      <td>MUSOMA</td>
+    </tr>
+    <tr>
+      <td>183</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>RORYA</td>
+      <td>RORYA</td>
+    </tr>
+    <tr>
+      <td>184</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>SERENGETI</td>
+      <td>SERENGETI</td>
+    </tr>
+    <tr>
+      <td>185</td>
+      <td>LAKE ZONE</td>
+      <td>MARA</td>
+      <td>TARIME</td>
+      <td>TARIME</td>
+    </tr>
+    <tr>
+      <td>186</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>ILEMELA</td>
+      <td>ILEMELA</td>
+    </tr>
+    <tr>
+      <td>187</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>KWIMBA</td>
+      <td>KWIMBA</td>
+    </tr>
+    <tr>
+      <td>188</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>MAGU</td>
+      <td>MAGU</td>
+    </tr>
+    <tr>
+      <td>189</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>MISUNGWI</td>
+      <td>MISUNGWI</td>
+    </tr>
+    <tr>
+      <td>190</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>MWANZA</td>
+      <td>MWANZA</td>
+    </tr>
+    <tr>
+      <td>191</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>NYAKATO</td>
+      <td>NYAKATO</td>
+    </tr>
+    <tr>
+      <td>192</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>NYAMAGANA</td>
+      <td>NYAMAGANA</td>
+    </tr>
+    <tr>
+      <td>193</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>SENGEREMA</td>
+      <td>SENGEREMA</td>
+    </tr>
+    <tr>
+      <td>194</td>
+      <td>LAKE ZONE</td>
+      <td>MWANZA</td>
+      <td>UKEREWE</td>
+      <td>UKEREWE</td>
+    </tr>
+    <tr>
+      <td>195</td>
+      <td>LAKE ZONE</td>
+      <td>SIMIYU</td>
+      <td>BARIADI</td>
+      <td>BARIADI</td>
+    </tr>
+    <tr>
+      <td>196</td>
+      <td>LAKE ZONE</td>
+      <td>SIMIYU</td>
+      <td>BUSEGA</td>
+      <td>BUSEGA</td>
+    </tr>
+    <tr>
+      <td>197</td>
+      <td>LAKE ZONE</td>
+      <td>SIMIYU</td>
+      <td>ITILIMA</td>
+      <td>ITILIMA</td>
+    </tr>
+    <tr>
+      <td>198</td>
+      <td>LAKE ZONE</td>
+      <td>SIMIYU</td>
+      <td>MASWA</td>
+      <td>MASWA</td>
+    </tr>
+    <tr>
+      <td>199</td>
+      <td>LAKE ZONE</td>
+      <td>SIMIYU</td>
+      <td>MEATU</td>
+      <td>MEATU</td>
+    </tr>
+    <tr>
+      <td>200</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>ARUSHA MJINI</td>
+      <td>ARUSHA DC</td>
+    </tr>
+    <tr>
+      <td>201</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>ARUSHA MJINI</td>
+      <td>NGARAMTONI</td>
+    </tr>
+    <tr>
+      <td>202</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>ARUSHA MJINI</td>
+      <td>NJIRO</td>
+    </tr>
+    <tr>
+      <td>203</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>ARUSHA MJINI</td>
+      <td>SAKINA</td>
+    </tr>
+    <tr>
+      <td>204</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>KARATU</td>
+      <td>KARATU MJINI</td>
+    </tr>
+    <tr>
+      <td>205</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>LOLIONDO</td>
+      <td>DIGO DIGO</td>
+    </tr>
+    <tr>
+      <td>206</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>LOLIONDO</td>
+      <td>LOLIONDO MJINI</td>
+    </tr>
+    <tr>
+      <td>207</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>LONGIDO</td>
+      <td>KETUMBEINE</td>
+    </tr>
+    <tr>
+      <td>208</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>LONGIDO</td>
+      <td>LONGIDO MJINI</td>
+    </tr>
+    <tr>
+      <td>209</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>MERERANI</td>
+      <td>MERERANI MJINI</td>
+    </tr>
+    <tr>
+      <td>210</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>MONDULI</td>
+      <td>MONDULI MJINI</td>
+    </tr>
+    <tr>
+      <td>211</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>MURRIET</td>
+      <td>MURRIET</td>
+    </tr>
+    <tr>
+      <td>212</td>
+      <td>NORTH ZONE</td>
+      <td>ARUSHA</td>
+      <td>USA RIVER</td>
+      <td>USA RIVER TOWN</td>
+    </tr>
+    <tr>
+      <td>213</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>HAI</td>
+      <td>BOMANG'OMBE</td>
+    </tr>
+    <tr>
+      <td>214</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>HIMO</td>
+      <td>HIMO</td>
+    </tr>
+    <tr>
+      <td>215</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>MOSHI URBAN</td>
+      <td>MOSHI</td>
+    </tr>
+    <tr>
+      <td>216</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>MWANGA</td>
+      <td>MWANGA MJINI</td>
+    </tr>
+    <tr>
+      <td>217</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>ROMBO</td>
+      <td>ROMBO MJINI</td>
+    </tr>
+    <tr>
+      <td>218</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>SAME</td>
+      <td>SAME MJINI</td>
+    </tr>
+    <tr>
+      <td>219</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>SIHA</td>
+      <td>NGARENAIROBI</td>
+    </tr>
+    <tr>
+      <td>220</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>SIHA</td>
+      <td>SIHA MJINI</td>
+    </tr>
+    <tr>
+      <td>221</td>
+      <td>NORTH ZONE</td>
+      <td>KILIMANJARO</td>
+      <td>SIMANJIRO</td>
+      <td>SIMANJIRO</td>
+    </tr>
+    <tr>
+      <td>222</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>BABATI MJINI</td>
+    </tr>
+    <tr>
+      <td>223</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>BASHNET</td>
+    </tr>
+    <tr>
+      <td>224</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>BEREKO</td>
+    </tr>
+    <tr>
+      <td>225</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>DAREDA</td>
+    </tr>
+    <tr>
+      <td>226</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>GALLAPO</td>
+    </tr>
+    <tr>
+      <td>227</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>MADUNGA</td>
+    </tr>
+    <tr>
+      <td>228</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>MAGARA</td>
+    </tr>
+    <tr>
+      <td>229</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>MAGUGU</td>
+    </tr>
+    <tr>
+      <td>230</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>BABATI</td>
+      <td>MINJINGU</td>
+    </tr>
+    <tr>
+      <td>231</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>KATESH</td>
+      <td>KATESH</td>
+    </tr>
+    <tr>
+      <td>232</td>
+      <td>NORTH ZONE</td>
+      <td>MANYARA</td>
+      <td>MBULU</td>
+      <td>MBULU MJINI</td>
+    </tr>
+    <tr>
+      <td>233</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>HANDENI</td>
+      <td>HANDENI TOWN</td>
+    </tr>
+    <tr>
+      <td>234</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>HANDENI</td>
+      <td>KWAMKONO</td>
+    </tr>
+    <tr>
+      <td>235</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>HANDENI</td>
+      <td>MADEBE</td>
+    </tr>
+    <tr>
+      <td>236</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>HANDENI</td>
+      <td>MZUNDU</td>
+    </tr>
+    <tr>
+      <td>237</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>KILINDI</td>
+      <td>KILINDI</td>
+    </tr>
+    <tr>
+      <td>238</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>KOROGWE</td>
+      <td>MAGOMA</td>
+    </tr>
+    <tr>
+      <td>239</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>LUSHOTO</td>
+      <td>LUSHOTO TOWN</td>
+    </tr>
+    <tr>
+      <td>240</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>LUSHOTO</td>
+      <td>MALIBWI</td>
+    </tr>
+    <tr>
+      <td>241</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>LUSHOTO</td>
+      <td>MGWASHI</td>
+    </tr>
+    <tr>
+      <td>242</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>LUSHOTO</td>
+      <td>MKUMBARA</td>
+    </tr>
+    <tr>
+      <td>243</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>LUSHOTO</td>
+      <td>VITI</td>
+    </tr>
+    <tr>
+      <td>244</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MKINGA</td>
+      <td>DALUNI KISIWANI</td>
+    </tr>
+    <tr>
+      <td>245</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MKINGA</td>
+      <td>KASERA</td>
+    </tr>
+    <tr>
+      <td>246</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MKINGA</td>
+      <td>MARAMBA</td>
+    </tr>
+    <tr>
+      <td>247</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MUHEZA</td>
+      <td>BOMBANI</td>
+    </tr>
+    <tr>
+      <td>248</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MUHEZA</td>
+      <td>BULWA</td>
+    </tr>
+    <tr>
+      <td>249</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MUHEZA</td>
+      <td>MJESANI</td>
+    </tr>
+    <tr>
+      <td>250</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>MUHEZA</td>
+      <td>MUHEZA</td>
+    </tr>
+    <tr>
+      <td>251</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>PANGANI</td>
+      <td>KIGOMBE</td>
+    </tr>
+    <tr>
+      <td>252</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>PANGANI</td>
+      <td>PANGANI BUSHIRI</td>
+    </tr>
+    <tr>
+      <td>253</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>PANGANI</td>
+      <td>SAKURA</td>
+    </tr>
+    <tr>
+      <td>254</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>TANGA MJINI</td>
+      <td>AMBONI</td>
+    </tr>
+    <tr>
+      <td>255</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>TANGA MJINI</td>
+      <td>KANGE KASERA</td>
+    </tr>
+    <tr>
+      <td>256</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>TANGA MJINI</td>
+      <td>PONGWE</td>
+    </tr>
+    <tr>
+      <td>257</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>TANGA MJINI</td>
+      <td>TANGA MJINI</td>
+    </tr>
+    <tr>
+      <td>258</td>
+      <td>NORTH ZONE</td>
+      <td>TANGA</td>
+      <td>TANGA MJINI</td>
+      <td>TANGASISI</td>
+    </tr>
+    <tr>
+      <td>259</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+      <td>IPOGOLO</td>
+    </tr>
+    <tr>
+      <td>260</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+    </tr>
+    <tr>
+      <td>261</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+      <td>KIHESA</td>
+    </tr>
+    <tr>
+      <td>262</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+      <td>MIOMBONI</td>
+    </tr>
+    <tr>
+      <td>263</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>IRINGA</td>
+      <td>ZIZI</td>
+    </tr>
+    <tr>
+      <td>264</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>KILOLO</td>
+      <td>KILOLO</td>
+    </tr>
+    <tr>
+      <td>265</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>MAFINGA</td>
+      <td>IFUPIRA</td>
+    </tr>
+    <tr>
+      <td>266</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>MAFINGA</td>
+      <td>MALANGALI</td>
+    </tr>
+    <tr>
+      <td>267</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>MAFINGA</td>
+      <td>NYOLOLO</td>
+    </tr>
+    <tr>
+      <td>268</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>IRINGA</td>
+      <td>MAFINGA</td>
+      <td>SADANI</td>
+    </tr>
+    <tr>
+      <td>269</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>CHUNYA</td>
+      <td>CHALANGWA</td>
+    </tr>
+    <tr>
+      <td>270</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>CHUNYA</td>
+      <td>CHNY DISTRICT</td>
+    </tr>
+    <tr>
+      <td>271</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>CHUNYA</td>
+      <td>MATUNDASI</td>
+    </tr>
+    <tr>
+      <td>272</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>KYELA</td>
+      <td>BUSALE</td>
+    </tr>
+    <tr>
+      <td>273</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>KYELA</td>
+      <td>IKOLO</td>
+    </tr>
+    <tr>
+      <td>274</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>KYELA</td>
+      <td>MATEMA</td>
+    </tr>
+    <tr>
+      <td>275</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>KYELA</td>
+      <td>TOWN</td>
+    </tr>
+    <tr>
+      <td>276</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>IGAWA</td>
+    </tr>
+    <tr>
+      <td>277</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MAPOGORO</td>
+    </tr>
+    <tr>
+      <td>278</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MAWINDI</td>
+    </tr>
+    <tr>
+      <td>279</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MBARALI</td>
+    </tr>
+    <tr>
+      <td>280</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MIOMBWENI</td>
+    </tr>
+    <tr>
+      <td>281</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MSWISWI</td>
+    </tr>
+    <tr>
+      <td>282</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>MWATENGA</td>
+    </tr>
+    <tr>
+      <td>283</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>RUJEWA</td>
+    </tr>
+    <tr>
+      <td>284</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBARALI</td>
+      <td>UBARUKU</td>
+    </tr>
+    <tr>
+      <td>285</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>GHANA</td>
+    </tr>
+    <tr>
+      <td>286</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>ISUTO</td>
+    </tr>
+    <tr>
+      <td>287</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>ITUHA</td>
+    </tr>
+    <tr>
+      <td>288</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>IYUNGA</td>
+    </tr>
+    <tr>
+      <td>289</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>KAWETELE</td>
+    </tr>
+    <tr>
+      <td>290</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>MBALIZI</td>
+    </tr>
+    <tr>
+      <td>291</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>META</td>
+    </tr>
+    <tr>
+      <td>292</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>MWANJELWA</td>
+    </tr>
+    <tr>
+      <td>293</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>OLD AIRPORT</td>
+    </tr>
+    <tr>
+      <td>294</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>UHINDINI</td>
+    </tr>
+    <tr>
+      <td>295</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>MBEYA</td>
+      <td>UYOLE</td>
+    </tr>
+    <tr>
+      <td>296</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>IKUTI</td>
+    </tr>
+    <tr>
+      <td>297</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>ISANGE</td>
+    </tr>
+    <tr>
+      <td>298</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>KIWIRA</td>
+    </tr>
+    <tr>
+      <td>299</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>MASUKULU</td>
+    </tr>
+    <tr>
+      <td>300</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>MTABA</td>
+    </tr>
+    <tr>
+      <td>301</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>NTOKELA</td>
+    </tr>
+    <tr>
+      <td>302</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>SUMA</td>
+    </tr>
+    <tr>
+      <td>303</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>TUKUYU MJINI</td>
+    </tr>
+    <tr>
+      <td>304</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>MBEYA</td>
+      <td>TUKUYU</td>
+      <td>USHIRIKA</td>
+    </tr>
+    <tr>
+      <td>305</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>LUDEWA</td>
+      <td>LUDEWA</td>
+    </tr>
+    <tr>
+      <td>306</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>LUDEWA</td>
+      <td>LUILO-SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>307</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>LUDEWA</td>
+      <td>MAVANGA</td>
+    </tr>
+    <tr>
+      <td>308</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>LUDEWA</td>
+      <td>MUNDINDI- SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>309</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKAMBAKO</td>
+      <td>MAKAMBAKO</td>
+    </tr>
+    <tr>
+      <td>310</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKAMBAKO</td>
+      <td>MTWANGO</td>
+    </tr>
+    <tr>
+      <td>311</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKAMBAKO</td>
+      <td>SAJA</td>
+    </tr>
+    <tr>
+      <td>312</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKETE</td>
+      <td>IKUO</td>
+    </tr>
+    <tr>
+      <td>313</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKETE</td>
+      <td>LIPELELE</td>
+    </tr>
+    <tr>
+      <td>314</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>MAKETE</td>
+      <td>MAKETE</td>
+    </tr>
+    <tr>
+      <td>315</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>NJOMBE</td>
+      <td>KIFANYA</td>
+    </tr>
+    <tr>
+      <td>316</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>NJOMBE</td>
+      <td>MJIMWEMA</td>
+    </tr>
+    <tr>
+      <td>317</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>NJOMBE</td>
+      <td>NJOMBE</td>
+    </tr>
+    <tr>
+      <td>318</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>WANGING'OMBE</td>
+      <td>KIPENGELE</td>
+    </tr>
+    <tr>
+      <td>319</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>NJOMBE</td>
+      <td>WANGING'OMBE</td>
+      <td>WANGING'OMBE</td>
+    </tr>
+    <tr>
+      <td>320</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>KALAMBO</td>
+      <td>KALAMBO</td>
+    </tr>
+    <tr>
+      <td>321</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>KALAMBO</td>
+      <td>KATETE</td>
+    </tr>
+    <tr>
+      <td>322</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>KALAMBO</td>
+      <td>LEGEZA MWENDO</td>
+    </tr>
+    <tr>
+      <td>323</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>LAELA</td>
+      <td>KAOZE</td>
+    </tr>
+    <tr>
+      <td>324</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>LAELA</td>
+      <td>LAELA</td>
+    </tr>
+    <tr>
+      <td>325</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>LAELA</td>
+      <td>MPUI</td>
+    </tr>
+    <tr>
+      <td>326</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>LAELA</td>
+      <td>MPWAPWA</td>
+    </tr>
+    <tr>
+      <td>327</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>NKASI</td>
+      <td>NKASI</td>
+    </tr>
+    <tr>
+      <td>328</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>NKASI</td>
+      <td>NTALAMILA</td>
+    </tr>
+    <tr>
+      <td>329</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>NKASI</td>
+      <td>WAMPEMBE</td>
+    </tr>
+    <tr>
+      <td>330</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>SUMBAWANGA</td>
+      <td>KAENGESA</td>
+    </tr>
+    <tr>
+      <td>331</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>RUKWA</td>
+      <td>SUMBAWANGA</td>
+      <td>SUMBAWANGA</td>
+    </tr>
+    <tr>
+      <td>332</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>ILEJE</td>
+      <td>ISONGOLE</td>
+    </tr>
+    <tr>
+      <td>333</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>ILEJE</td>
+      <td>ITUMBA</td>
+    </tr>
+    <tr>
+      <td>334</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>ILEJE</td>
+      <td>LUBANDA</td>
+    </tr>
+    <tr>
+      <td>335</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>MBOZI</td>
+      <td>IGAMBA</td>
+    </tr>
+    <tr>
+      <td>336</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>MOMBA</td>
+      <td>CHIPAKA</td>
+    </tr>
+    <tr>
+      <td>337</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>MOMBA</td>
+      <td>MPEMBA</td>
+    </tr>
+    <tr>
+      <td>338</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>SONGWE</td>
+      <td>KANGA</td>
+    </tr>
+    <tr>
+      <td>339</td>
+      <td>SOUTH WEST HIGHLANDS</td>
+      <td>SONGWE</td>
+      <td>SONGWE</td>
+      <td>SONGWE MKWAJUNI</td>
+    </tr>
+    <tr>
+      <td>340</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>HOTELI TATU</td>
+    </tr>
+    <tr>
+      <td>341</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>KILWA</td>
+    </tr>
+    <tr>
+      <td>342</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>KIPATIMO</td>
+    </tr>
+    <tr>
+      <td>343</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>NANGURUKURU</td>
+    </tr>
+    <tr>
+      <td>344</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>NANGURUKURU-SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>345</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>NJINJO</td>
+    </tr>
+    <tr>
+      <td>346</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>PANDE</td>
+    </tr>
+    <tr>
+      <td>347</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>KILWA</td>
+      <td>SOMANGA</td>
+    </tr>
+    <tr>
+      <td>348</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>LINDI</td>
+      <td>LINDI</td>
+    </tr>
+    <tr>
+      <td>349</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>LINDI</td>
+      <td>MNAZI MMOJA</td>
+    </tr>
+    <tr>
+      <td>350</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>LIWALE</td>
+      <td>LIWALE</td>
+    </tr>
+    <tr>
+      <td>351</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>NACHINGWEA</td>
+      <td>LIONJA</td>
+    </tr>
+    <tr>
+      <td>352</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>NACHINGWEA</td>
+      <td>MTUA</td>
+    </tr>
+    <tr>
+      <td>353</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>NACHINGWEA</td>
+      <td>NACHINGWEA</td>
+    </tr>
+    <tr>
+      <td>354</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>NACHINGWEA</td>
+      <td>NAIPANGA</td>
+    </tr>
+    <tr>
+      <td>355</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>RUANGWA</td>
+      <td>NAMICHIGA</td>
+    </tr>
+    <tr>
+      <td>356</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>RUANGWA</td>
+      <td>NANDAGALA</td>
+    </tr>
+    <tr>
+      <td>357</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>RUANGWA</td>
+      <td>NAGUMBU</td>
+    </tr>
+    <tr>
+      <td>358</td>
+      <td>SOUTH ZONE</td>
+      <td>LINDI</td>
+      <td>RUANGWA</td>
+      <td>RUANGWA</td>
+    </tr>
+    <tr>
+      <td>359</td>
+      <td>SOUTH ZONE</td>
+      <td>MTWARA</td>
+      <td>MASASI</td>
+      <td>MASASI</td>
+    </tr>
+    <tr>
+      <td>360</td>
+      <td>SOUTH ZONE</td>
+      <td>MTWARA</td>
+      <td>MTWARA</td>
+      <td>MTWARA</td>
+    </tr>
+    <tr>
+      <td>361</td>
+      <td>SOUTH ZONE</td>
+      <td>MTWARA</td>
+      <td>NANYUMBU</td>
+      <td>NANYUMBU</td>
+    </tr>
+    <tr>
+      <td>362</td>
+      <td>SOUTH ZONE</td>
+      <td>MTWARA</td>
+      <td>NEWALA</td>
+      <td>NEWALA</td>
+    </tr>
+    <tr>
+      <td>363</td>
+      <td>SOUTH ZONE</td>
+      <td>MTWARA</td>
+      <td>TANDAHIMBA</td>
+      <td>TANDAHIMBA</td>
+    </tr>
+    <tr>
+      <td>364</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>MBINGA</td>
+      <td>MBINGA</td>
+    </tr>
+    <tr>
+      <td>365</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>NAMTUMBO</td>
+      <td>NAMTUMBO</td>
+    </tr>
+    <tr>
+      <td>366</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>NYASA</td>
+      <td>NYASA</td>
+    </tr>
+    <tr>
+      <td>367</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>SONGEA</td>
+      <td>SONGEA</td>
+    </tr>
+    <tr>
+      <td>368</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>LIGOMA &amp; MCHULUKA &amp; TUWEMACHO &amp; NAMASAKATA</td>
+    </tr>
+    <tr>
+      <td>369</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>MATEMANGA &amp; JAKIKA &amp; NAMWINYU &amp; LIGUNGA</td>
+    </tr>
+    <tr>
+      <td>370</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>MBESA &amp; CHIWANA</td>
+    </tr>
+    <tr>
+      <td>371</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>MINDU &amp; NAMIUNGO &amp; NGAPA &amp; TINGINYA</td>
+    </tr>
+    <tr>
+      <td>372</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>MLINGOTI MASHARIKI &amp; MLINGOTI MAGHARIBI</td>
+    </tr>
+    <tr>
+      <td>373</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>NAKAPANYA &amp; NAMAKAMBALE &amp; MAJIMAJI</td>
+    </tr>
+    <tr>
+      <td>374</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>NAKAYAYA &amp; MAJENGO &amp; MANJOKA &amp; MASONYA</td>
+    </tr>
+    <tr>
+      <td>375</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>NAMPUNGU &amp; KIDODOMA &amp; NANDEMBO</td>
+    </tr>
+    <tr>
+      <td>376</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>SISI KWA SISI &amp; MUHUWESI &amp; MCHANGANI</td>
+    </tr>
+    <tr>
+      <td>377</td>
+      <td>SOUTH ZONE</td>
+      <td>RUVUMA</td>
+      <td>TUNDURU</td>
+      <td>TUNDURU</td>
+    </tr>
+    <tr>
+      <td>378</td>
+      <td>WEST ZONE</td>
+      <td>KATAVI</td>
+      <td>MLELE</td>
+      <td>KIBAONI SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>379</td>
+      <td>WEST ZONE</td>
+      <td>KATAVI</td>
+      <td>MPANDA</td>
+      <td>MPANDA</td>
+    </tr>
+    <tr>
+      <td>380</td>
+      <td>WEST ZONE</td>
+      <td>KATAVI</td>
+      <td>TANGANYIKA</td>
+      <td>IKOLA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>381</td>
+      <td>WEST ZONE</td>
+      <td>KATAVI</td>
+      <td>TANGANYIKA</td>
+      <td>TANGANYIKA</td>
+    </tr>
+    <tr>
+      <td>382</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>BUHIGWE</td>
+      <td>BUHIGWE</td>
+    </tr>
+    <tr>
+      <td>383</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>KAKONKO</td>
+      <td>KAKONKO</td>
+    </tr>
+    <tr>
+      <td>384</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>KASULU</td>
+      <td>KASULU</td>
+    </tr>
+    <tr>
+      <td>385</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>KIBONDO</td>
+      <td>KIBONDO</td>
+    </tr>
+    <tr>
+      <td>386</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>KIGOMA TOWN</td>
+      <td>KIGOMA</td>
+    </tr>
+    <tr>
+      <td>387</td>
+      <td>WEST ZONE</td>
+      <td>KIGOMA</td>
+      <td>UVINZA</td>
+      <td>UVINZA</td>
+    </tr>
+    <tr>
+      <td>388</td>
+      <td>WEST ZONE</td>
+      <td>SHINYANGA</td>
+      <td>KAHAMA</td>
+      <td>KAHAMA</td>
+    </tr>
+    <tr>
+      <td>389</td>
+      <td>WEST ZONE</td>
+      <td>SHINYANGA</td>
+      <td>KISHAPU</td>
+      <td>KISHAPU</td>
+    </tr>
+    <tr>
+      <td>390</td>
+      <td>WEST ZONE</td>
+      <td>SHINYANGA</td>
+      <td>SHINYANGA TOWN</td>
+      <td>SHINYANGA</td>
+    </tr>
+    <tr>
+      <td>391</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>IGUNGA</td>
+      <td>IGULUBI</td>
+    </tr>
+    <tr>
+      <td>392</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>IGUNGA</td>
+      <td>NKINGA SUB OFFICE IGUNGA</td>
+    </tr>
+    <tr>
+      <td>393</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>IGUNGA</td>
+      <td>ZIBA</td>
+    </tr>
+    <tr>
+      <td>394</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>KALIUA</td>
+      <td>KALIUA TOWN</td>
+    </tr>
+    <tr>
+      <td>395</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>KALIUA</td>
+      <td>KASHISHI</td>
+    </tr>
+    <tr>
+      <td>396</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>KALIUA</td>
+      <td>MBETA</td>
+    </tr>
+    <tr>
+      <td>397</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>KALIUA</td>
+      <td>ULYANKULU SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>398</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>KALIUA</td>
+      <td>USINGE</td>
+    </tr>
+    <tr>
+      <td>399</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>NZEGA</td>
+      <td>ISHIHIMULWA</td>
+    </tr>
+    <tr>
+      <td>400</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>NZEGA</td>
+      <td>NZEGA</td>
+    </tr>
+    <tr>
+      <td>401</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>SIKONGE</td>
+      <td>MITUNDU</td>
+    </tr>
+    <tr>
+      <td>402</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>SIKONGE</td>
+      <td>SIKONGE TOWN</td>
+    </tr>
+    <tr>
+      <td>403</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>TABORA TOWN</td>
+      <td>TABORA</td>
+    </tr>
+    <tr>
+      <td>404</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>URAMBO</td>
+      <td>URAMBO</td>
+    </tr>
+    <tr>
+      <td>405</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>UYUI</td>
+      <td>BUSONDO</td>
+    </tr>
+    <tr>
+      <td>406</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>UYUI</td>
+      <td>NDALA SUB OFFICE</td>
+    </tr>
+    <tr>
+      <td>407</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>UYUI</td>
+      <td>PUGE</td>
+    </tr>
+    <tr>
+      <td>408</td>
+      <td>WEST ZONE</td>
+      <td>TABORA</td>
+      <td>UYUI</td>
+      <td>UYUI TOWN</td>
+    </tr>   
+
+</tbody>
+        </table>
+    </div>
+
+    <script>
+        // Get the search input element and table
+        const searchInput = document.getElementById('searchInput');
+        const table = document.getElementById('dataTable');
+        const tbody = table.getElementsByTagName('tbody')[0];
+
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase();
+            const rows = tbody.getElementsByTagName('tr');
+
+            for (let i = 0; i < rows.length; i++) {
+                const cells = rows[i].getElementsByTagName('td');
+                let visible = false;
+
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].textContent.toLowerCase().includes(query)) {
+                        visible = true;
+                        break;
+                    }
+                }
+
+                rows[i].style.display = visible ? '' : 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
